@@ -9,7 +9,6 @@ Die Stammdaten werden durch die Abteilung Geoinformation nachgeführt und im Int
 ==== Klasse `+Katalogeintrag+`
 Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte +Katalogeintrag+, sondern nur Objekte von den spezialisierten Klassen.
 
-Spaltenbreite Variante 1:
 [cols="10%, 60%, 20%, 10%",options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
@@ -35,89 +34,89 @@ m| Bemerkung
 | öffentlich
 |===
 
-Spaltenbreite Variante 2:
-[cols=4*,options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
-m| Code
-| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
-| in_Aenderung
-| öffentlich
-m| Name
-| Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird
-| in Änderung
-| öffentlich
-m| SortierNr
-| Reihenfolge des Katalogeintrages in der Auswahlliste
-| 1
-| öffentlich
-m| Bemerkung
-| Erläuterung, welche den Katalogeintrag näher beschreibt
-| Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
-| öffentlich
-|===
-
-==== Klasse `+Standard-Katalogeintrag+`
-Die Verbindlichkeit kam mit der Aufnahme der statischen Waldgrenzen in den ÖREB-Kataster.
+==== Klasse `+Methode+`
+Die Klasse `+Methode+` führt die Werte der gleichnamigen Aufzählungen im Bundesmodell.
 
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
 4+| _Diese Klasse führt keine zusätzlichen Attribute_
-4+| *Anforderungen*
+4+| *Bedingungen*
 m|Code
-3+| Die Werte müssen eindeutig sein
+3+| Die Werte müssen eindeutig sein.
 m|Name
-3+| Die Werte müssen eindeutig sein
+3+| Die Werte müssen eindeutig sein.
 |===
 
-==== Klasse `+separate Stammdaten+`
-Über den Typ wird die Art der Geometrie festgelegt.
+==== Klasse `+Beurteilung+`
+Die Klasse `+Beurteilung+` führt die Werte der gleichnamigen Aufzählungen im Bundesmodell.
 
-In der Klasse `+Typ+` wurde anfänglich auch der Typ des Wirkbereiches aufgeführt. Weil ein Wirkbereich jedoch stets gleich symbolisiert wird, wurde entschieden, auf diesen Eintrag zu verzichtet.
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
-m| Code
-| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
-| ausserhalb_Bauzonen_statisch
-| öffentlich
-m| Name
-| Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird
-| Waldgrenze ausserhalb Bauzone (statisch)
-| öffentlich
-m| Abkuerzung
-| Kurzform des Katalogeintrages
-| WGraB_s
-| öffentlich
-m| SortierNr
-| Reihenfolge des Katalogeintrages in der Auswahlliste
-| 2
-| öffentlich
-m| Bemerkung
-| Erläuterung, welche den Katalogeintrag näher beschreibt
-| Statische Waldgrenze in Gebieten ausserhalb der Bauzonen, in denen der Kanton eine Zunahme des Waldes verhindern will.
-| öffentlich
-m| Symbol
-| Bild des Legendeneintrages; codiert als Base64-Wert
-| iVBORw0KGg... (gekürzt)
-| öffentlich
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Bedingungen*
+m|Code
+3+| Die Werte müssen eindeutig sein.
+m|Name
+3+| Die Werte müssen eindeutig sein.
 |===
-
 
 === Topic `+Fachdaten+`
 Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
-==== Klasse `+Klasse1+`
-Die Klasse `+Klasse1+` führt .....
+==== Klasse `+OekomorphologieSeeufer+`
+Die Klasse `+OekomorphologieSeeufer+` führt die Informationen zur Ökomorphologie des Seeufers.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Kennung
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| Achsgeometrie
+| todo
+| todo
+| öffentlich
+m| LinearpositionVon
+| todo
+| todo
+| öffentlich
+m| LinearpositionBis
+| todo
+| todo
+| öffentlich
+m| Bezeichnung_andere_Methode
+| todo
+| todo
+| öffentlich
+m| Aufnahmezeitpunkt
+| todo
+| todo
+| öffentlich
+m| Bildpfad
+| todo
+| todo
+| +++<span style="color:red;">intern</span>+++
+m| Bemerkung
+| öffentliche Bemerkung zum Objekt
+| Das ist eine öffentliche Bemerkung
+| öffentlich
+4+| *Beziehungsattribute*
+m| rGeometrie
+| Fremdschlüssel zur Geometrie, welche mit dem Dokument verknüpft ist.
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+4+| *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| öffentlich
+4+| *Bedingungen*
+m|Kennung
+3+| Die Werte müssen eindeutig sein.
+|===
 
 [cols=4*,options="header"]
 |===
@@ -164,7 +163,6 @@ m| Geometrie
 | (ohne Beispiel)
 | öffentlich
 |===
-
 
 [%header, cols="10%, 10%, 10%, 60%, 10%", format=csv, separator=;]
 |=======
