@@ -1,0 +1,9 @@
+= Dateibeschreibung
+
+[cols=*,options="header"]
+|===
+| Dateiname | Beschreibung | Modell (Version)
+| *Stammdaten_2000-01-01.xtf*
+| Diese Datei enthält die Stammdaten, welche für die publizierten Daten gelten. Die Datei wurde am 29. Januar 2025.
+| SZ_Beispielmodell_V1 (2024-07-29)
+|===
