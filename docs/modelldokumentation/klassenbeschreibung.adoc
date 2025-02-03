@@ -66,7 +66,7 @@ m|Name
 Das Topic `+Fachdaten+` umfasst die fachlichen Klassen des Themas.
 
 ==== Klasse `+OekomorphologieSeeufer+`
-Die Klasse `+OekomorphologieSeeufer+` führt die Informationen zur Ökomorphologie des Seeufers.
+Die Klasse `+OekomorphologieSeeufer+` führt die Informationen zur Ökomorphologie des Seeufers. Die Klasse wird durch `+Methode_BAFU+` und `+Methode_IGKB+` spezialisiert.
 
 [cols=4*,options="header"]
 |===
@@ -77,7 +77,7 @@ Aufbau: <Jahr>-<Monat>-<Tag>_<Laufnummer>
 | 2009-07-01_100023
 | öffentlich
 m| Achsgeometrie
-| Wert der Referenzgeometrie, auf welche sich der Abschnitt bezieht (vgl. Bedingungen unten).
+| Wert der Referenzgeometrie, auf welche sich der Abschnitt bezieht (vgl. Bedingungen unten)
 | 1013
 | öffentlich
 m| LinearpositionVon
@@ -89,7 +89,7 @@ m| LinearpositionBis
 | 13758.4
 | öffentlich
 m| Bezeichnung_andere_Methode
-| freier Text, um im Falle Methode = ‘andere’ dies genauer beschreiben zu können
+| falls Methode = ‘andere’, kann diese hier genauer beschreiben werden
 | CIPEL
 | öffentlich
 m| Aufnahmezeitpunkt
@@ -125,56 +125,290 @@ m|Achsgeometrie
 3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili[SZ_Referenzgeometrie_Standgewaesser_V1] übereinstimmen.
 |===
 
+==== Klasse `+Methode_BAFU+`
+Die Klasse `+Methode_BAFU+` ist eine Spezialisierung der Klasse `+OekomorphologieSeeufer+` und führt die methodenspezifischen Informationen.
+
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
+m| Oekomorphologie_gesamt
+| Beurteilung der Ökomorphologie gesamthaft
+| 0.9
 | öffentlich
-m| erfasstVon
-| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
-| Musterha
-| +++<span style="color:red;">intern</span>+++
-m| erfasstAm
-| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
-| 1980-03-21T15:38:12
+m| Oekomorphologie_Flachwasserzone
+| Beurteilung der Ökomorphologie der Flachwasserzone
+| 0.8
 | öffentlich
-m| geaendertVon
-| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
-| Muelleran
-| +++<span style="color:red;">intern</span>+++
-m| geaendertAm
-| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
-| 2024-07-30T08:07:57
+m| Oekomorphologie_Uferstreifen
+| Beurteilung der Ökomorphologie des Uferstreifens
+| 0.7
 | öffentlich
-m| gueltigVon
-| Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.
-| 2024-01-01
+m| Oekomorphologie_Uferlinie
+| Beurteilung der Ökomorphologie der Uferlinie
+| 0.9
 | öffentlich
-m| gueltigBis
-| Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.
-| 2030-12-31
+m| Oekomorphologie_Hinterland
+| Beurteilung der Ökomorphologie des Hinterlandes
+| 0.5
 | öffentlich
-m| Bemerkung
-| öffentliche Bemerkung zum Objekt
-| Das ist eine öffentliche Bemerkung
+m| Nutzung_Uferstreifen
+| Klassierung der Nutzung des Uferstreifens
+| 0.8
 | öffentlich
-m| Bemerkung_intern
-| Erläuterung, welche den Katalogeintrag näher beschreibt
-| Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
-| +++<span style="color:red;">amtsintern</span>+++
+4+| *Beziehungsattribute*
+m| - - -
+| - - -
+| - - -
+| - - -
 4+| *Geometrie*
-m| Geometrie
-| Geometrie des Objektes
-| (ohne Beispiel)
-| öffentlich
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Bedingungen*
+m| - - -
+3+| - - -
 |===
 
-[%header, cols="10%, 10%, 10%, 60%, 10%", format=csv, separator=;]
-|=======
-include::../table/klasse_katalogeintrag.csv[]
-|=======
+==== Klasse `+Methode_IGKB+`
+Die Klasse `+Methode_IGKB+` ist eine Spezialisierung der Klasse `+OekomorphologieSeeufer+` und führt die methodenspezifischen Informationen.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Gesamtbeurteilung
+| gewichtete Gesamtbeurteilung des Uferzustandes
+| 4.96
+| öffentlich
+m| Uferlinie
+| Indexwert für die naturnahe Uferlinie in Abweichung vom Referenzzustand
+| 4
+| öffentlich
+m| Deltabildung
+| Indexwert für die Deltabildung
+| 3
+| öffentlich
+m| Ufersubstrat
+| Indexwert für das Ufersubstrat
+| 5
+| öffentlich
+m| Litoralsubstrat
+| Indexwert für das Litoralsubstrat
+| -1
+| öffentlich
+m| Totholz
+| Indexwert für das Totholz
+| 1
+| öffentlich
+m| Hindernisse
+| Indexwert für die Hindernisse
+| 4
+| öffentlich
+m| Uferverbauung
+| Indexwert für die Uferverbauung
+| 3
+| öffentlich
+m| Durchgaengigkeit
+| Indexwert für die biologische Durchgängigkeit
+| -1
+| öffentlich
+m| Ufervegetation_landseitig
+| Indexwert für die landseitige Ufervegetation bzw. -gehölz
+| 3
+| öffentlich
+m| Roehricht
+| Indexwert für den Röhricht
+| -1
+| öffentlich
+m| Makrophyten
+| Indexwert für die Makrophyten
+| -1
+| öffentlich
+m| Veralgung
+| Indexwert für die Veralgung
+| 5
+| öffentlich
+m| Stoerfrequenz
+| Indexwert für die Störfrequenz
+| 3
+| öffentlich
+m| Kinderstube
+| Indexwert für die Kinderstube
+| 4
+| öffentlich
+m| Anbindung_Hinterland
+| Indexwert für die Anbindung des Hinterlandes
+| 4
+| öffentlich
+m| Ufertyp
+| Indexwert für den Ufertyp
+| 3
+| öffentlich
+m| Breite_Flachwasserzone
+| Breite der Flachwasserzone
+| 6
+| öffentlich
+m| Treibgut
+| Indexwert für das Treibgut
+| 4
+| öffentlich
+m| Erosion
+| Indexwert für die Erosion
+| 2
+| öffentlich
+m| Erholung
+| Indexwert für die Erholung
+| -1
+| öffentlich
+m| Kulturwert
+| Indexwert für den Kulturwert
+| 2
+| öffentlich
+m| Strandrasen
+| Indexwert für den Strandrasen
+| 5
+| öffentlich
+m| Aufwertungspotential
+| Indexwert für das Aufwertungspotential
+| 3
+| öffentlich
+m| GISbasierter_Nutzen
+| Indexwert für den GIS-basierter Nutzen
+| 2
+| öffentlich
+4+| *Beziehungsattribute*
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Geometrie*
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Bedingungen*
+m| - - -
+3+| - - -
+|===
+
+==== Klasse `+Resultat_Plan_B_E_F+`
+Die Klasse `+Resultat_Plan_B_E_F+` führt die  <todo>. Die Klasse ist abstrakt.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Kennung
+| Objektidentifikator +
+Aufbau: <Jahr>-<Monat>-<Tag>_<Laufnummer>
+| 2009-07-01_100023
+| öffentlich
+m| Achsgeometrie
+| Wert der Referenzgeometrie, auf welche sich der Abschnitt bezieht (vgl. Bedingungen unten)
+| 1013
+| öffentlich
+m| LinearpositionVon
+| Wert, ab dem der Abschnitt beginnt.
+| 13646.9
+| öffentlich
+m| LinearpositionBis
+| Wert, bei dem der Abschnitt endet.
+| 13758.4
+| öffentlich
+m| Bemerkung
+| Bemerkung zum Objekt
+| Das ist eine Bemerkung
+| +++<span style="color:red;">intern</span>+++
+4+| *Beziehungsattribute*
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Geometrie*
+m| Geometrie
+| - - -
+| - - -
+| - - -
+4+| *Bedingungen*
+m|Kennung
+3+| Die Werte müssen eindeutig sein.
+m|Achsgeometrie
+3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili[SZ_Referenzgeometrie_Standgewaesser_V1] übereinstimmen.
+|===
+
+==== Klasse `+Oek_L_Bedeutung+`
+Die Klasse `+Oek_L_Bedeutung+` führt die Information über die ökologische und landschaftliche Bedeutung. Sie ist eine Spezialisierung der Klasse `+Resultat_Plan_B_E_F+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Oek_LS_Bedeutung
+| Faktor der ökologischen und landschaftlichen Bedeutung
+| 1.1
+| öffentlich
+4+| *Beziehungsattribute*
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Geometrie*
+m| Geometrie
+| - - -
+| - - -
+| - - -
+4+| *Bedingungen*
+m| - - -
+3+| - - -
+|===
+
+==== Klasse `+Nutzen_Aufwand+`
+Die Klasse `+Nutzen_Aufwand+` führt die Information über den Nutzen für Natur und Landschaft. Sie ist eine Spezialisierung der Klasse `+Resultat_Plan_B_E_F+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Nutzen_NL_Aufwand
+| klassifizierter Nutzen für Natur und Landschaft im Verhältnis zum Aufwand
+| 3
+| öffentlich
+4+| *Beziehungsattribute*
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Geometrie*
+m| Geometrie
+| - - -
+| - - -
+| - - -
+4+| *Bedingungen*
+m| - - -
+3+| - - -
+|===
+
+==== Klasse `+Umsetzung+`
+Die Klasse `+Umsetzung+` führt die Umsetzungsfristen. Sie ist eine Spezialisierung der Klasse `+Resultat_Plan_B_E_F+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Zeitfenster_geplante_Umsetzung
+| codierter Wert der Umsetzungsfrist
+| 12
+| öffentlich
+4+| *Beziehungsattribute*
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Geometrie*
+m| Geometrie
+| - - -
+| - - -
+| - - -
+4+| *Bedingungen*
+m| - - -
+3+| - - -
+|===
 
 ifdef::backend-pdf[]
 <<<
