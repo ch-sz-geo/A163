@@ -1,15 +1,12 @@
 == Modelltransformationen
 === Transformation vom Bearbeitungsmodell ins Publikationsmodell
 * Quellmodell: https://raw.githubusercontent.com/ch-sz-geo/A064/refs/heads/main/models/SZ_Schutzwald_V1_Bearbeitung.ili[Bearbeitungsmodell "SZ_Schutzwald_V1" (Version: 2025-01-23)]
-* Zielmodell: https://raw.githubusercontent.com/ch-sz-geo/A064/refs/heads/main/models/SZ_Schutzwald_V1.ili[Publikationsmodell verwaltungsintern "SZ_Schutzwald_V1_Bearbeitung" (Version: 2025-01-23)]
+* Zielmodell: todo +
+Beispiel: https://raw.githubusercontent.com/ch-sz-geo/A064/refs/heads/main/models/SZ_Schutzwald_V1.ili[Publikationsmodell verwaltungsintern "SZ_Schutzwald_V1_Bearbeitung" (Version: 2025-01-23)]
 
 === Transformation ins minimale Geodatenmodell des Bundes
 * Quellmodell: Das hier beschriebene Datenmodell
-* Zielmodell: http://models.geo.admin.ch/BAFU/todo[<Modellname> (Version: 2023-03-20)]
-
-=== Transformation ins Transfermodell ÖREB-Kataster
-* Quellmodell: Das hier beschriebene Datenmodell
-* Zielmodell: https://models.geo.admin.ch/V_D/OeREB/OeREBKRMtrsfr_V2_0.ili[OeREBKRMtrsfr_V2_0 (Version: 2021-04-14)]
+* Zielmodell: http://models.geo.admin.ch/BAFU/Revitalisierung_Seen_V1_2.ili[Revitalisierung_Seen_V1_2 (Version: 2021-09-13)]
 
 ==== Klasse `+DarstellungsDienst+`
 [cols=2*,options="header"]
@@ -68,16 +65,6 @@ m| https://data.geo.sz.ch/public/Themen/A057b/[Legende.xml] m| ArtCodeliste
 | fix: " `+ch.StatischeWaldgrenzen+` " m| Thema
 | - - - m| SubThema
 |===
-
-
-[cols="e,m,^,>s",width="25%"]
-|===
-|1 >s|2 |3 |4
-^|5 2.2+^.^|6 .3+<.>m|7
-^|8
-|9 2+>|10
-|===
-
 
 ifdef::backend-pdf[]
 <<<
