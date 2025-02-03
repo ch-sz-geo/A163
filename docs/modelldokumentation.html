@@ -217,6 +217,12 @@ th {
 <li><a href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a>
 <ul class="sectlevel3">
 <li><a href="#_klasse_oekomorphologieseeufer">4.2.1. Klasse <code>OekomorphologieSeeufer</code></a></li>
+<li><a href="#_klasse_methode_bafu">4.2.2. Klasse <code>Methode_BAFU</code></a></li>
+<li><a href="#_klasse_methode_igkb">4.2.3. Klasse <code>Methode_IGKB</code></a></li>
+<li><a href="#_klasse_resultat_plan_b_e_f">4.2.4. Klasse <code>Resultat_Plan_B_E_F</code></a></li>
+<li><a href="#_klasse_oek_l_bedeutung">4.2.5. Klasse <code>Oek_L_Bedeutung</code></a></li>
+<li><a href="#_klasse_nutzen_aufwand">4.2.6. Klasse <code>Nutzen_Aufwand</code></a></li>
+<li><a href="#_klasse_umsetzung">4.2.7. Klasse <code>Umsetzung</code></a></li>
 </ul>
 </li>
 </ul>
@@ -581,7 +587,7 @@ Kuno Epper (Kep), AGI</p></td>
 <div class="sect3">
 <h4 id="_klasse_oekomorphologieseeufer"><a class="anchor" href="#_klasse_oekomorphologieseeufer"></a><a class="link" href="#_klasse_oekomorphologieseeufer">4.2.1. Klasse <code>OekomorphologieSeeufer</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>OekomorphologieSeeufer</code> führt die Informationen zur Ökomorphologie des Seeufers.</p>
+<p>Die Klasse <code>OekomorphologieSeeufer</code> führt die Informationen zur Ökomorphologie des Seeufers. Die Klasse wird durch <code>Methode_BAFU</code> und <code>Methode_IGKB</code> spezialisiert.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -608,7 +614,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Achsgeometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Wert der Referenzgeometrie, auf welche sich der Abschnitt bezieht (vgl. Bedingungen unten).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wert der Referenzgeometrie, auf welche sich der Abschnitt bezieht (vgl. Bedingungen unten)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1013</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
@@ -626,7 +632,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bezeichnung_andere_Methode</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">freier Text, um im Falle Methode = ‘andere’ dies genauer beschreiben zu können</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">falls Methode = ‘andere’, kann diese hier genauer beschreiben werden</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CIPEL</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
@@ -685,6 +691,12 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_methode_bafu"><a class="anchor" href="#_klasse_methode_bafu"></a><a class="link" href="#_klasse_methode_bafu">4.2.2. Klasse <code>Methode_BAFU</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Methode_BAFU</code> ist eine Spezialisierung der Klasse <code>OekomorphologieSeeufer</code> und führt die methodenspezifischen Informationen.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -702,115 +714,513 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Oekomorphologie_gesamt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beurteilung der Ökomorphologie gesamthaft</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Oekomorphologie_Flachwasserzone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beurteilung der Ökomorphologie der Flachwasserzone</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Oekomorphologie_Uferstreifen</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beurteilung der Ökomorphologie des Uferstreifens</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.7</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Oekomorphologie_Uferlinie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beurteilung der Ökomorphologie der Uferlinie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigBis</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2030-12-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Oekomorphologie_Hinterland</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beurteilung der Ökomorphologie des Hinterlandes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nutzung_Uferstreifen</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klassierung der Nutzung des Uferstreifens</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">- - -</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_methode_igkb"><a class="anchor" href="#_klasse_methode_igkb"></a><a class="link" href="#_klasse_methode_igkb">4.2.3. Klasse <code>Methode_IGKB</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Methode_IGKB</code> ist eine Spezialisierung der Klasse <code>OekomorphologieSeeufer</code> und führt die methodenspezifischen Informationen.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Gesamtbeurteilung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gewichtete Gesamtbeurteilung des Uferzustandes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.96</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Uferlinie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die naturnahe Uferlinie in Abweichung vom Referenzzustand</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Deltabildung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Deltabildung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ufersubstrat</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für das Ufersubstrat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Litoralsubstrat</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für das Litoralsubstrat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Totholz</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für das Totholz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Hindernisse</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Hindernisse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Uferverbauung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Uferverbauung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Durchgaengigkeit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die biologische Durchgängigkeit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ufervegetation_landseitig</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die landseitige Ufervegetation bzw. -gehölz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Roehricht</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für den Röhricht</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Makrophyten</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Makrophyten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Veralgung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Veralgung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stoerfrequenz</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Störfrequenz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kinderstube</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Kinderstube</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Anbindung_Hinterland</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Anbindung des Hinterlandes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ufertyp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für den Ufertyp</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Breite_Flachwasserzone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Breite der Flachwasserzone</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Treibgut</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für das Treibgut</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Erosion</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Erosion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Erholung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Erholung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kulturwert</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für den Kulturwert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Strandrasen</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für den Strandrasen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Aufwertungspotential</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für das Aufwertungspotential</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GISbasierter_Nutzen</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für den GIS-basierter Nutzen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">- - -</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_resultat_plan_b_e_f"><a class="anchor" href="#_klasse_resultat_plan_b_e_f"></a><a class="link" href="#_klasse_resultat_plan_b_e_f">4.2.4. Klasse <code>Resultat_Plan_B_E_F</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Resultat_Plan_B_E_F</code> führt die  &lt;todo&gt;. Die Klasse ist abstrakt.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objektidentifikator<br>
+Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2009-07-01_100023</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Achsgeometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wert der Referenzgeometrie, auf welche sich der Abschnitt bezieht (vgl. Bedingungen unten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1013</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LinearpositionVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wert, ab dem der Abschnitt beginnt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13646.9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LinearpositionBis</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wert, bei dem der Abschnitt endet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13758.4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentliche Bemerkung zum Objekt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine öffentliche Bemerkung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung_intern</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">amtsintern</span></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Achsgeometrie</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Der Wert muss mit dem Wert in <code>Ufergeometrie.Kennung</code> des Datenmodells <a href="https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili">SZ_Referenzgeometrie_Standgewaesser_V1</a> übereinstimmen.</p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_oek_l_bedeutung"><a class="anchor" href="#_klasse_oek_l_bedeutung"></a><a class="link" href="#_klasse_oek_l_bedeutung">4.2.5. Klasse <code>Oek_L_Bedeutung</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Oek_L_Bedeutung</code> führt die Information über die ökologische und landschaftliche Bedeutung. Sie ist eine Spezialisierung der Klasse <code>Resultat_Plan_B_E_F</code>.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 10%;">
-<col style="width: 10%;">
-<col style="width: 10%;">
-<col style="width: 60%;">
-<col style="width: 10%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Attribute</th>
-<th class="tableblock halign-left valign-top">Anzahl</th>
-<th class="tableblock halign-left valign-top">Typ</th>
+<th class="tableblock halign-left valign-top">Name</th>
 <th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
 <th class="tableblock halign-left valign-top">Freigabe</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Katalogeintrages; entspricht dem Wert der Aufzählung in einem INTERLIS-Modell. Der Code beinhaltet den "Wert für die Maschine" und dient z.B. zur Steuerung einer Applikation (z.B. Farbvergabe); Änderungen am Code sind mit allen Parteien, die am Datenaustausch beteiligt sind, abzusprechen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Oek_LS_Bedeutung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Faktor der ökologischen und landschaftlichen Bedeutung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zahl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">für den Benutzer lesbarer Name des Katalogeintrages Der Name beinhaltet den Wert "für den Menschen".</p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">- - -</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_nutzen_aufwand"><a class="anchor" href="#_klasse_nutzen_aufwand"></a><a class="link" href="#_klasse_nutzen_aufwand">4.2.6. Klasse <code>Nutzen_Aufwand</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Nutzen_Aufwand</code> führt die Information über den Nutzen für Natur und Landschaft. Sie ist eine Spezialisierung der Klasse <code>Resultat_Plan_B_E_F</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nutzen_NL_Aufwand</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">klassifizierter Nutzen für Natur und Landschaft im Verhältnis zum Aufwand</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SortierNr</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zahl</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Die Sortiernummer bestimmt die Position eines Wertes in der Liste: je tiefer die Zahl, desto weiter oben steht der Wert in der Liste.</p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">- - -</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_umsetzung"><a class="anchor" href="#_klasse_umsetzung"></a><a class="link" href="#_klasse_umsetzung">4.2.7. Klasse <code>Umsetzung</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Umsetzung</code> führt die Umsetzungsfristen. Sie ist eine Spezialisierung der Klasse <code>Resultat_Plan_B_E_F</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Zeitfenster_geplante_Umsetzung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">codierter Wert der Umsetzungsfrist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterungen zum Objekt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>- - -</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">- - -</p></td>
 </tr>
 </tbody>
 </table>
@@ -1026,7 +1436,7 @@ Zudem muss der Code des Waldfeststellungstatus <code>Verfahrensstatus.Code</code
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-02-03 14:04:40 UTC
+Last updated 2025-02-03 15:57:07 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
