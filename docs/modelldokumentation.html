@@ -576,7 +576,7 @@ Kuno Epper (Kep), AGI</p></td>
 <div class="sect2">
 <h3 id="_topic_fachdaten"><a class="anchor" href="#_topic_fachdaten"></a><a class="link" href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a></h3>
 <div class="paragraph">
-<p>Das Topic <code>Fachdaten</code> umfasst die eigentlichen, fachlichen Klassen des Themas.</p>
+<p>Das Topic <code>Fachdaten</code> umfasst die fachlichen Klassen des Themas.</p>
 </div>
 <div class="sect3">
 <h4 id="_klasse_oekomorphologieseeufer"><a class="anchor" href="#_klasse_oekomorphologieseeufer"></a><a class="link" href="#_klasse_oekomorphologieseeufer">4.2.1. Klasse <code>OekomorphologieSeeufer</code></a></h4>
@@ -601,58 +601,65 @@ Kuno Epper (Kep), AGI</p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objektidentifikator<br>
+Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2009-07-01_100023</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Achsgeometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wert der Referenzgeometrie, auf welche sich der Abschnitt bezieht (vgl. Bedingungen unten).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1013</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>LinearpositionVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wert, ab dem der Abschnitt beginnt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13646.9</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>LinearpositionBis</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wert, bei dem der Abschnitt endet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13758.4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bezeichnung_andere_Methode</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">freier Text, um im Falle Methode = ‘andere’ dies genauer beschreiben zu können</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CIPEL</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Aufnahmezeitpunkt</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aufnahmezeitpunkt der Bildgrundlage, der Begehung oder Plänen, die der Erfassung zu Grunde liegt. Bei mehreren Beurteilungsgrundlagen mit unterschiedlichen Erstellungsdaten, ist das aktuellste Datum anzugeben vgl. (Niederberger et al., 2016)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2019-07-31</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bildpfad</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verzeichnispfad, welcher auf das dem Abschnit zugeordneten Bild verweist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I:\\&lt;Pfad zur Datei&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentliche Bemerkung zum Objekt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine öffentliche Bemerkung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rGeometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Geometrie, welche mit dem Dokument verknüpft ist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rMethode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Methode (Stammdaten), welche dem Objekt zugeordnet ist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rGesamtbeurteilung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Beurteilung (Stammdaten), welche dem Objekt zugeordnet ist.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
@@ -661,9 +668,9 @@ Kuno Epper (Kep), AGI</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
@@ -671,6 +678,10 @@ Kuno Epper (Kep), AGI</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
 <td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Achsgeometrie</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Der Wert muss mit dem Wert in <code>Ufergeometrie.Kennung</code> des Datenmodells <a href="https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili">SZ_Referenzgeometrie_Standgewaesser_V1</a> übereinstimmen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1015,7 +1026,7 @@ Zudem muss der Code des Waldfeststellungstatus <code>Verfahrensstatus.Code</code
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-02-03 12:51:09 UTC
+Last updated 2025-02-03 14:04:40 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
