@@ -63,7 +63,7 @@ m|Name
 |===
 
 === Topic `+Fachdaten+`
-Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
+Das Topic `+Fachdaten+` umfasst die fachlichen Klassen des Themas.
 
 ==== Klasse `+OekomorphologieSeeufer+`
 Die Klasse `+OekomorphologieSeeufer+` führt die Informationen zur Ökomorphologie des Seeufers.
@@ -72,50 +72,57 @@ Die Klasse `+OekomorphologieSeeufer+` führt die Informationen zur Ökomorpholog
 |===
 | Name | Beschreibung | Beispiel | Freigabe
 m| Kennung
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| Objektidentifikator +
+Aufbau: <Jahr>-<Monat>-<Tag>_<Laufnummer>
+| 2009-07-01_100023
 | öffentlich
 m| Achsgeometrie
-| todo
-| todo
+| Wert der Referenzgeometrie, auf welche sich der Abschnitt bezieht (vgl. Bedingungen unten).
+| 1013
 | öffentlich
 m| LinearpositionVon
-| todo
-| todo
+| Wert, ab dem der Abschnitt beginnt.
+| 13646.9
 | öffentlich
 m| LinearpositionBis
-| todo
-| todo
+| Wert, bei dem der Abschnitt endet.
+| 13758.4
 | öffentlich
 m| Bezeichnung_andere_Methode
-| todo
-| todo
+| freier Text, um im Falle Methode = ‘andere’ dies genauer beschreiben zu können
+| CIPEL
 | öffentlich
 m| Aufnahmezeitpunkt
-| todo
-| todo
+| Aufnahmezeitpunkt der Bildgrundlage, der Begehung oder Plänen, die der Erfassung zu Grunde liegt. Bei mehreren Beurteilungsgrundlagen mit unterschiedlichen Erstellungsdaten, ist das aktuellste Datum anzugeben vgl. (Niederberger et al., 2016)
+| 2019-07-31
 | öffentlich
 m| Bildpfad
-| todo
-| todo
+| Verzeichnispfad, welcher auf das dem Abschnit zugeordneten Bild verweist
+| I:\\<Pfad zur Datei>
 | +++<span style="color:red;">intern</span>+++
 m| Bemerkung
-| öffentliche Bemerkung zum Objekt
-| Das ist eine öffentliche Bemerkung
-| öffentlich
+| Bemerkung zum Objekt
+| Das ist eine Bemerkung
+| +++<span style="color:red;">intern</span>+++
 4+| *Beziehungsattribute*
-m| rGeometrie
-| Fremdschlüssel zur Geometrie, welche mit dem Dokument verknüpft ist.
+m| rMethode
+| Fremdschlüssel zur Methode (Stammdaten), welche dem Objekt zugeordnet ist.
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rGesamtbeurteilung
+| Fremdschlüssel zur Beurteilung (Stammdaten), welche dem Objekt zugeordnet ist.
 | ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
 | öffentlich
 4+| *Geometrie*
 m| Geometrie
-| Geometrie des Objektes
-| (ohne Beispiel)
-| öffentlich
+| - - -
+| - - -
+| - - -
 4+| *Bedingungen*
 m|Kennung
 3+| Die Werte müssen eindeutig sein.
+m|Achsgeometrie
+3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili[SZ_Referenzgeometrie_Standgewaesser_V1] übereinstimmen.
 |===
 
 [cols=4*,options="header"]
