@@ -672,6 +672,9 @@ c. durch das Zusammenwirken mit anderen Massnahmen zum Schutz der natürlichen L
 <div class="paragraph">
 <p>Das Topic <code>Fachdaten</code> umfasst die fachlichen Klassen des Themas.</p>
 </div>
+<div class="paragraph">
+<p>Im kantonalen Modell verzichtet man auf die Klassen <code>SeeKanton</code> und <code>UferlinieGeometrie</code> des Bundesmodells. Zudem sind die Abschnitte linear referenziert. Die Attribute der linearen Referenzierung sind zu den entsprechenden Klassen hinzugefügt. Die für die lineare Referenzierung erforderliche Referenzgeometrie der Uferlinie entnehme man dem Datensatz A154 "Referenzgeometrie Standgewässer".</p>
+</div>
 <div class="sect3">
 <h4 id="_klasse_oekomorphologieseeufer"><a class="anchor" href="#_klasse_oekomorphologieseeufer"></a><a class="link" href="#_klasse_oekomorphologieseeufer">4.2.1. Klasse <code>OekomorphologieSeeufer</code></a></h4>
 <div class="paragraph">
@@ -771,7 +774,16 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein.</p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Die Werte müssen innerhalb der Klasse eindeutig sein.</p>
+</li>
+<li>
+<p>Nach der Vergabe muss der Wert unverändert bleiben.</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Achsgeometrie</code></p></td>
@@ -996,13 +1008,55 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Treibgut</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für das Treibgut</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Code für das Treibgut. Es gilt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1: sehr gering</p>
+</li>
+<li>
+<p>2: gering</p>
+</li>
+<li>
+<p>3: mässig</p>
+</li>
+<li>
+<p>4: stark</p>
+</li>
+<li>
+<p>5: sehr stark</p>
+</li>
+</ul>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Erosion</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für die Erosion</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Code für die Erosion. Es gilt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1: sehr gering</p>
+</li>
+<li>
+<p>2: gering</p>
+</li>
+<li>
+<p>3: mässig</p>
+</li>
+<li>
+<p>4: stark</p>
+</li>
+<li>
+<p>5: sehr stark</p>
+</li>
+</ul>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
@@ -1014,21 +1068,62 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kulturwert</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für den Kulturwert</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Code für den Kulturwert. Es gilt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>-1: nicht relevant</p>
+</li>
+<li>
+<p>1: gering</p>
+</li>
+<li>
+<p>2: mässig</p>
+</li>
+<li>
+<p>3: gross</p>
+</li>
+</ul>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Strandrasen</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Indexwert für den Strandrasen</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Code für den Strandrasen. Es gilt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>-1: nicht relevant</p>
+</li>
+<li>
+<p>1: sehr gering</p>
+</li>
+<li>
+<p>2: gering</p>
+</li>
+<li>
+<p>3: mässig</p>
+</li>
+<li>
+<p>4: stark</p>
+</li>
+<li>
+<p>5: sehr stark</p>
+</li>
+</ul>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Aufwertungspotential</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Code für das Aufwertungspotential<br>
-Es gelten:</p>
+<p>Code für das Aufwertungspotential. Es gilt:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1049,8 +1144,7 @@ Es gelten:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>GISbasierter_Nutzen</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Code für den GIS-basierter Nutzen<br>
-Es gelten:</p>
+<p>Code für den GIS-basierter Nutzen. Es gilt:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1171,7 +1265,16 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein.</p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Die Werte müssen innerhalb der Klasse eindeutig sein.</p>
+</li>
+<li>
+<p>Nach der Vergabe muss der Wert unverändert bleiben.</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Achsgeometrie</code></p></td>
@@ -1372,7 +1475,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-02-04 13:36:43 UTC
+Last updated 2025-02-04 14:38:37 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
