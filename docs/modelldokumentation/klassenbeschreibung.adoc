@@ -129,7 +129,7 @@ m|Achsgeometrie
 |===
 
 ==== Klasse `+Methode_BAFU+`
-Die Klasse `+Methode_BAFU+` ist eine Spezialisierung der Klasse `+OekomorphologieSeeufer+` und führt die methodenspezifischen Informationen.
+Die Klasse `+Methode_BAFU+` ist eine Spezialisierung der Klasse `+OekomorphologieSeeufer+` und führt die spezifischen Informationen, welche mit der Methode BAFU erhoben werden. Mit der Methode BAFU erfolgt die Revitalisierungsbeurteilung (RB) anhand verschiedener Index-Werte (Uferstreifen, Flachwasserzone, usw.).
 
 [cols=4*,options="header"]
 |===
@@ -174,7 +174,7 @@ m| - - -
 |===
 
 ==== Klasse `+Methode_IGKB+`
-Die Klasse `+Methode_IGKB+` ist eine Spezialisierung der Klasse `+OekomorphologieSeeufer+` und führt die methodenspezifischen Informationen.
+Die Klasse `+Methode_IGKB+` ist eine Spezialisierung der Klasse `+OekomorphologieSeeufer+` und führt die spezifischen Informationen, welche mit der Methode IGKB erhoben werden.
 
 [cols=4*,options="header"]
 |===
