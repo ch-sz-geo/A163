@@ -65,6 +65,8 @@ m|Name
 === Topic `+Fachdaten+`
 Das Topic `+Fachdaten+` umfasst die fachlichen Klassen des Themas.
 
+Im kantonalen Modell verzichtet man auf die Klassen `+SeeKanton+` und `+UferlinieGeometrie+` des Bundesmodells. Zudem sind die Abschnitte linear referenziert. Die Attribute der linearen Referenzierung sind zu den entsprechenden Klassen hinzugefügt. Die für die lineare Referenzierung erforderliche Referenzgeometrie der Uferlinie entnehme man dem Datensatz A154 "Referenzgeometrie Standgewässer".
+
 ==== Klasse `+OekomorphologieSeeufer+`
 Die Klasse `+OekomorphologieSeeufer+` führt die Informationen zur Ökomorphologie des Seeufers. Die Klasse wird durch `+Methode_BAFU+` und `+Methode_IGKB+` spezialisiert.
 
@@ -120,7 +122,8 @@ m| Geometrie
 | - - -
 4+| *Bedingungen*
 m|Kennung
-3+| Die Werte müssen eindeutig sein.
+3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
+* Nach der Vergabe muss der Wert unverändert bleiben.
 m|Achsgeometrie
 3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili[SZ_Referenzgeometrie_Standgewaesser_V1] übereinstimmen.
 |===
@@ -249,11 +252,23 @@ m| Breite_Flachwasserzone
 | 6
 | öffentlich
 m| Treibgut
-| Indexwert für das Treibgut
+a| Code für das Treibgut. Es gilt:
+
+* 1: sehr gering
+* 2: gering 
+* 3: mässig 
+* 4: stark 
+* 5: sehr stark 
 | 4
 | öffentlich
 m| Erosion
-| Indexwert für die Erosion
+a| Code für die Erosion. Es gilt:
+
+* 1: sehr gering
+* 2: gering 
+* 3: mässig 
+* 4: stark 
+* 5: sehr stark 
 | 2
 | öffentlich
 m| Erholung
@@ -261,16 +276,27 @@ m| Erholung
 | -1
 | öffentlich
 m| Kulturwert
-| Indexwert für den Kulturwert
+a| Code für den Kulturwert. Es gilt:
+
+* -1: nicht relevant
+* 1: gering 
+* 2: mässig 
+* 3: gross
 | 2
 | öffentlich
 m| Strandrasen
-| Indexwert für den Strandrasen
+a| Code für den Strandrasen. Es gilt:
+
+* -1: nicht relevant
+* 1: sehr gering 
+* 2: gering 
+* 3: mässig 
+* 4: stark 
+* 5: sehr stark 
 | 5
 | öffentlich
 m| Aufwertungspotential
-a| Code für das Aufwertungspotential +
-Es gelten:
+a| Code für das Aufwertungspotential. Es gilt:
 
 * 1: gering
 * 2: mittel
@@ -278,8 +304,7 @@ Es gelten:
 | 3
 | öffentlich
 m| GISbasierter_Nutzen
-a| Code für den GIS-basierter Nutzen +
-Es gelten:
+a| Code für den GIS-basierter Nutzen. Es gilt:
 
 * 1: kein/gering
 * 2: mittel
@@ -340,7 +365,8 @@ m| - - -
 | - - -
 4+| *Bedingungen*
 m|Kennung
-3+| Die Werte müssen eindeutig sein.
+3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
+* Nach der Vergabe muss der Wert unverändert bleiben.
 m|Achsgeometrie
 3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili[SZ_Referenzgeometrie_Standgewaesser_V1] übereinstimmen.
 |===
