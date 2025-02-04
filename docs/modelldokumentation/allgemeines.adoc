@@ -5,15 +5,60 @@ Seit dem 1. Juli 2008 ist das https://www.fedlex.admin.ch/eli/cc/2008/388/de[Bun
 
 Am 1. Januar 2013 trat die https://www.sz.ch/public/upload/assets/5600/214_111.pdf?fp=11[kantonale Verordnung über Geoinformation (KGeoiV, SRSZ 214.111)] in Kraft. Sie präzisiert das KGeoiG in fachlicher sowie technischer Hinsicht und führt im Anhang 1 den „Katalog der Geobasisdaten des Bundesrechts mit Zuständigkeit beim Kanton“ und im Anhang 2 den „Katalog der Geobasisdaten des kantonalen Rechts“. Darin werden die Fachstellen definiert, welche für die Ausarbeitung eines Geodatenmodells zuständig sind.
 
+Die Planung der Revitalisierungen von Seeufern wird im https://www.fedlex.admin.ch/eli/cc/1992/1860_1860_1860/de[Gewässerschutzgesetz (GSchG; SR 814.20)] sowie in der https://www.fedlex.admin.ch/eli/cc/1998/2863_2863_2863/de[Gewässerschutzverordnung (GSchV; SR 814.201)] geregelt.
+
+Art. 38a des GSchG verpflichtet die Kantone zur Planung und Durchführung von Revitalisierungen:
+
+__Art. 38a Revitalisierung von Gewässern +
+^1^ Die Kantone sorgen für die Revitalisierung von Gewässern. Sie berücksichtigen dabei den Nutzen für die Natur und die Landschaft sowie die wirtschaftlichen Auswirkungen, die sich aus der Revitalisierung ergeben. +
+^2^ Sie planen die Revitalisierungen und legen den Zeitplan dafür fest. Sie sorgen dafür, dass diese Planung bei der Richt- und Nutzungsplanung berücksichtigt wird. Für einen Verlust an Fruchtfolgeflächen ist nach den Vorgaben der Sachplanung des Bundes nach Artikel 13 des Raumplanungsgesetzes vom 22. Juni 1979 Ersatz zu leisten.__
+
+Art. 41d der GSchV konkretisiert die Planung:
+
+__Art 41d Planung von Revitalisierungen +
+^1^ Die Kantone erarbeiten die Grundlagen, die für die Planung der Revitalisierungen der Gewässer notwendig sind. Die Grundlagen enthalten insbesondere Angaben über: +
+a. den ökomorphologischen Zustand der Gewässer; +
+b. die Anlagen im Gewässerraum; +
+c. das ökologische Potenzial und die landschaftliche Bedeutung der Gewässer. +
+^2^ Sie legen in einer Planung für einen Zeitraum von 20 Jahren die zu revitalisierenden Gewässerabschnitte, die Art der Revitalisierungsmassnahmen und die Fristen fest, innert welcher die Massnahmen umgesetzt werden, und stimmen die Planung soweit erforderlich mit den Nachbarkantonen ab. Revitalisierungen sind vorrangig vorzusehen, wenn deren Nutzen: +
+a. für die Natur und die Landschaft gross ist; +
+b. im Verhältnis zum voraussichtlichen Aufwand gross ist; +
+c. durch das Zusammenwirken mit anderen Massnahmen zum Schutz der natürlichen Lebensräume oder zum Schutz vor Hochwasser vergrössert wird. +
+^3^ Sie verabschieden die Planung nach Absatz 2 für Fliessgewässer bis zum 31. Dezember 2014 und für stehende Gewässer bis zum 31. Dezember 2022. Sie unterbreiten die Planungen dem BAFU jeweils ein Jahr vor deren Verabschiedung zur Stellungnahme. +
+^4^ Sie erneuern die Planung nach Absatz 2 alle 12 Jahre für einen Zeitraum von 20 Jahren und unterbreiten diese dem BAFU jeweils ein Jahr vor deren Verabschiedung zur Stellungnahme.__
 
 ===  Zweck des Dokuments
 Dieses Dokument beschreibt den Geobasisdatensatz
  
-* *__Planung der Revitalisierungen von Gewässern (Bereich Standgewässer)__.* +
+* *__Planung der Revitalisierung von Seeufern (ID 191B)__.* +
 
-__<weitere Beschreibungen>__ +
+Dieser Geobasisdatensatz bildet mit weiteren kantonalen Geobasisdatensätzen den Bundesdatensatzes "Planung der Revitalisierungen von Gewässern (ID 191)". Der Bundesdatensatz wird in die Datensätze "Planung der Revitalisierung von Fliessgewässern (ID 191.1)" und "Planung der Revitalisierung von Seeufern (ID 191.2)" gegliedert. Bei ersterem wird auf Stufe Kanton eine weitere Unterscheidung zwischen den Daten der "Ökomorphologie" und der "Revitalisierungsplanung" gemacht. Die Bewirtschaftung erfolgt daher in den separaten Themen A026 (Ökomorphologie) und A180 (Revitalisierungsplanung). Die nachfolgende Tabelle zeigt die Auftrennung der Bundesdatensätze auf die kantonalen Themen:
 
-Diese Dokumentation richtet sich an alle Personen, welche sich über dieses Thema informieren möchten.
+[cols=3*,options="header"]
+|===
+| Geobasisdatensatz Bund (ID) | Geobasisdatensatz Kanton (ID) | Themennummer Kanton
+| Planung der Revitalisierungen von Gewässern (191)
+| __kein eigener Geobasisdatensatz auf Stufe Kanton__
+| __keine Themennummer__
+.2+<.>a| * Planung der Revitalisierung von Fliessgewässern (191.1)
+.2+<.>| Planung der Revitalisierung von Fliessgewässern (191A)
+| **A026:** Bereich "Ökomorphologie" -> Ökomorphologie Fliessgewässer
+| **A180:** Bereich "Planung" -> Planung der Revitalisierung von Fliessgewässern
+a| * Planung der Revitalisierung von Seeufern (191.2)
+| Planung der Revitalisierung von stehenden Gewässern (191B)
+| **A163:** Planung der Revitalisierung von Seeufern (inkl. deren Ökomorphologie)
+|===
+
+Es gilt zu beachten, dass die hier aufgeführten Namen der kantonalen Geobasisdatensätze (Spalte 2) erst nach der Revision mit den Namen in der kantonalen Geoinformationsverordnung übereinstimmen werden.
+
+===  Zielpublikum
+Die vorliegende Dokumentation richtet sich an folgende Nutzergruppen:
+
+* **Fachstelle für Modellierung,** die den inhaltlichen Rahmen des Themas festlegt,
+* **Datenbearbeiterinnen und -bearbeiter,** die sich über die Prozesse und Methoden der Datenpflege informieren,
+* **Verantwortliche für die Datenpublikation,** die die Daten entsprechend der Freigabestufe veröffentlichen und die Transformation in andere Modelle durchführen sowie
+* **Endnutzerinnen und Endnutzer,** die sich über den Inhalt und die Struktur der Daten informieren möchten.
+
 
 ifdef::backend-pdf[]
 <<<
