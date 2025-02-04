@@ -1,5 +1,5 @@
 // Hier den Titel eingeben
-:title: Planung der Revitalisierungen von Gewässern (Bereich Standgewässer) (A163)
+:title: Planung der Revitalisierung von Seeufern (A163)
 :subtitle: Modelldokumentation
 ifdef::backend-pdf[]
 = {title}
