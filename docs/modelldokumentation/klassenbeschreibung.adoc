@@ -269,11 +269,21 @@ m| Strandrasen
 | 5
 | öffentlich
 m| Aufwertungspotential
-| Indexwert für das Aufwertungspotential
+a| Code für das Aufwertungspotential +
+Es gelten:
+
+* 1: gering
+* 2: mittel
+* 3: hoch
 | 3
 | öffentlich
 m| GISbasierter_Nutzen
-| Indexwert für den GIS-basierter Nutzen
+a| Code für den GIS-basierter Nutzen +
+Es gelten:
+
+* 1: kein/gering
+* 2: mittel
+* 3: hoch
 | 2
 | öffentlich
 4+| *Beziehungsattribute*
