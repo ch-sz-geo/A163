@@ -38,6 +38,8 @@ h| Nr. h| Titel h| Autor(en) h| Version
 | [[doc-02]] [02] | https://www.fedlex.admin.ch/eli/cc/2008/389/de[Verordnung über Geoinformation (GeoIV) (SR 510.620)] | Bund | 21.05.2008
 | [[doc-03]] [03] | https://www.sz.ch/public/upload/assets/48275/214_110.pdf?fp=2[kantonales Geoinformationsgesetz (kGeoiG) (SRSZ 214.110)] | Kt. SZ | 24.06.2010
 | [[doc-04]] [04] | https://www.sz.ch/public/upload/assets/5600/214_111.pdf?fp=11[Verordnung zum kantonalen Geoinformationsgesetz (kGeoiV) (SRSZ 214.111)] | Kt. SZ | 18.12.2012
+| [[doc-05]] [05] | https://www.fedlex.admin.ch/eli/cc/1992/1860_1860_1860/de[Bundesgesetz über den Schutz der Gewässer (GSchG) (SR 814.20)] | Bund | 24.01.1991
+| [[doc-06]] [06] | https://www.fedlex.admin.ch/eli/cc/1998/2863_2863_2863/de[Gewässerchutzverordnung (GSchV) (SR 814.201)] | Bund | 28.10.1998
 |=======
 ====
 
