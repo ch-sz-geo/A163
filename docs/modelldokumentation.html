@@ -563,7 +563,7 @@ c. durch das Zusammenwirken mit anderen Massnahmen zum Schutz der natürlichen L
 <div class="sect3">
 <h4 id="_klasse_oekomorphologieseeufer"><a class="anchor" href="#_klasse_oekomorphologieseeufer"></a><a class="link" href="#_klasse_oekomorphologieseeufer">4.2.1. Klasse <code>OekomorphologieSeeufer</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>OekomorphologieSeeufer</code> führt die Informationen zur Ökomorphologie des Seeufers. Die Klasse wird durch <code>Methode_BAFU</code> und <code>Methode_IGKB</code> spezialisiert.</p>
+<p>Die Klasse <code>OekomorphologieSeeufer</code> führt die Informationen zur Ökomorphologie des Seeufers. Die Klasse wird durch <code>Methode_BAFU</code> und <code>Methode_IGKB</code> spezialisiert. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen der Klassen <code>Resultat_Plan_B_E_F</code> oder <code>Resultat_Plan_C_D</code> übereinstimmen würden.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1022,7 +1022,23 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 <div class="sect3">
 <h4 id="_klasse_resultat_plan_b_e_f"><a class="anchor" href="#_klasse_resultat_plan_b_e_f"></a><a class="link" href="#_klasse_resultat_plan_b_e_f">4.2.4. Klasse <code>Resultat_Plan_B_E_F</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Resultat_Plan_B_E_F</code> führt die  &lt;todo&gt;. Die Klasse ist abstrakt.</p>
+<p>Die Klasse <code>Resultat_Plan_B_E_F</code> führt die allgemeinen Attribute zur Beschreibung</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>der ökologischen und landschaftlichen Bedeutung (Klasse <code>Oek_L_Bedeutung</code>),</p>
+</li>
+<li>
+<p>des Nutzens für Natur und Landschaft im Verhältnis zum Aufwand (Klasse <code>Nutzen_Aufwand</code>) und</p>
+</li>
+<li>
+<p>der zeitlichen Priorisierung (Klasse <code>Umsetzung</code>).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die Klasse ist abstrakt. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen der Klassen <code>OekomorphologieSeeufer</code> oder <code>Resultat_Plan_C_D</code> übereinstimmen würden.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1253,7 +1269,20 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 <div class="sect3">
 <h4 id="_klasse_resultat_plan_c_d"><a class="anchor" href="#_klasse_resultat_plan_c_d"></a><a class="link" href="#_klasse_resultat_plan_c_d">4.2.8. Klasse <code>Resultat_Plan_C_D</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Resultat_Plan_C_D</code> führt die  &lt;todo&gt;. Die Klasse ist abstrakt.</p>
+<p>Die Klasse <code>Resultat_Plan_C_D</code> führt die allgemeinen Attribute zur Beschreibung</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>des berechneten Aufwertungspotentials (Klasse <code>Aufwertungspotential</code>; entspricht Ablaufschritt "C" der Abbildung 2 in [todo]) und</p>
+</li>
+<li>
+<p>des über GIS-Analysen berechneten Nutzens (Klasse <code>Nutzen</code>; entspricht Ablaufschritt "D" der Abbildung 2 in [todo]).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die Klasse ist abstrakt und erweitert mit ihren beiden spezialisierten Klassen das Bundesmodell mit kantonalen Mehranforderungen. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen der Klassen <code>OekomorphologieSeeufer</code> oder <code>Resultat_Plan_B_E_F</code> übereinstimmen würden.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1496,7 +1525,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-02-18 08:15:34 UTC
+Last updated 2025-02-18 09:20:10 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
