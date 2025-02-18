@@ -3,7 +3,22 @@
 * Quellmodell: Das hier beschriebene Datenmodell
 * Zielmodell: http://models.geo.admin.ch/BAFU/Revitalisierung_Seen_V1_2.ili[Revitalisierung_Seen_V1_2 (Version: 2021-09-13)]
 
-<todo>
+==== Allgemeines
+Für die meisten Klassen gilt eine 1:1 Zuordnung zwischen dem kantonalen Modell und dem Bundesmodell. Die Ausnahmen sind im Datenmodell (Historie) beschrieben. Aus diesen Grund wird hier auf eine vollständige Dokumentation verzichtet.
+
+Auf zwei Punkte sei hingewiesen:
+
+- Umgang mit den Werten für die Klasse `+Uferlinie_Geometrie+` und
+- Umgang mit den kantonalen Erweiterungen.
+
+==== Klasse `+Uferlinie_Geometrie+`
+Die Klasse `+Uferlinie_Geometrie+` enthält die Teillinien des Seeufers. Im kantonalen Modell sind diese linear referenziert und auf drei Klassen modelliert. Dies kann zu Redundanzen führen. Die Klassen sind:
+
+- `+OekomorphologieSeeufer+`
+- `+Resultat_Plan_B_E_F+`
+- `+Resultat_Plan_C_D+`
+
+Die letzte Klasse `+Resultat_Plan_C_D+` ist nicht Teil des Bundesmodells und kann hier vernachlässigt werden. Die beiden anderen Klassen `+OekomorphologieSeeufer+` und `+Resultat_Plan_B_E_F+` weisen im Bundesmodell eine Beziehung zur Klasse `+Uferlinie_Geometrie+` auf. Damit wäre es möglich, dass sich Objekte der beiden Klassen auf die gleiche Uferliniengeometrie beziehen, was im kantonalen Modell nicht der Fall ist. Bei der Überführung der Daten ins Bundesmodell liegt es im Ermessen der zuständigen Person, ob sie gleiche Uferlinienstücke redundanzfrei abfüllt oder gleiche Abschnitte mehrfach einträgt.
 
 ifdef::backend-pdf[]
 <<<
