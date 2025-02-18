@@ -227,7 +227,12 @@ th {
 </li>
 <li><a href="#_modelltransformationen">5. Modelltransformationen</a>
 <ul class="sectlevel2">
-<li><a href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.1. Transformation ins minimale Geodatenmodell des Bundes</a></li>
+<li><a href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.1. Transformation ins minimale Geodatenmodell des Bundes</a>
+<ul class="sectlevel3">
+<li><a href="#_allgemeines_2">5.1.1. Allgemeines</a></li>
+<li><a href="#_klasse_uferlinie_geometrie">5.1.2. Klasse <code>Uferlinie_Geometrie</code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1524,8 +1529,46 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </li>
 </ul>
 </div>
+<div class="sect3">
+<h4 id="_allgemeines_2"><a class="anchor" href="#_allgemeines_2"></a><a class="link" href="#_allgemeines_2">5.1.1. Allgemeines</a></h4>
 <div class="paragraph">
-<p>&lt;todo&gt;</p>
+<p>Für die meisten Klassen gilt eine 1:1 Zuordnung zwischen dem kantonalen Modell und dem Bundesmodell. Die Ausnahmen sind im Datenmodell (Historie) beschrieben. Aus diesen Grund wird hier auf eine vollständige Dokumentation verzichtet.</p>
+</div>
+<div class="paragraph">
+<p>Auf zwei Punkte sei hingewiesen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Umgang mit den Werten für die Klasse <code>Uferlinie_Geometrie</code> und</p>
+</li>
+<li>
+<p>Umgang mit den kantonalen Erweiterungen.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_klasse_uferlinie_geometrie"><a class="anchor" href="#_klasse_uferlinie_geometrie"></a><a class="link" href="#_klasse_uferlinie_geometrie">5.1.2. Klasse <code>Uferlinie_Geometrie</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Uferlinie_Geometrie</code> enthält die Teillinien des Seeufers. Im kantonalen Modell sind diese linear referenziert und auf drei Klassen modelliert. Dies kann zu Redundanzen führen. Die Klassen sind:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>OekomorphologieSeeufer</code></p>
+</li>
+<li>
+<p><code>Resultat_Plan_B_E_F</code></p>
+</li>
+<li>
+<p><code>Resultat_Plan_C_D</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die letzte Klasse <code>Resultat_Plan_C_D</code> ist nicht Teil des Bundesmodells und kann hier vernachlässigt werden. Die beiden anderen Klassen <code>OekomorphologieSeeufer</code> und <code>Resultat_Plan_B_E_F</code> weisen im Bundesmodell eine Beziehung zur Klasse <code>Uferlinie_Geometrie</code> auf. Damit wäre es möglich, dass sich Objekte der beiden Klassen auf die gleiche Uferliniengeometrie beziehen, was im kantonalen Modell nicht der Fall ist. Bei der Überführung der Daten ins Bundesmodell liegt es im Ermessen der zuständigen Person, ob sie gleiche Uferlinienstücke redundanzfrei abfüllt oder gleiche Abschnitte mehrfach einträgt.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1533,7 +1576,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-02-18 09:51:59 UTC
+Last updated 2025-02-18 11:12:43 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
