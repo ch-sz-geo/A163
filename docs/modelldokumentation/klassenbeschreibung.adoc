@@ -55,19 +55,9 @@ m| Bemerkung
 | Das ist eine Bemerkung
 | +++<span style="color:red;">intern</span>+++
 4+| *Beziehungsattribute*
-m| rMethode
-| Fremdschlüssel zur Methode (Stammdaten), welche dem Objekt zugeordnet ist.
-| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
-| öffentlich
-m| rGesamtbeurteilung
-| Fremdschlüssel zur Beurteilung (Stammdaten), welche dem Objekt zugeordnet ist.
-| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
-| öffentlich
+4+| - - -
 4+| *Geometrie*
-m| Geometrie
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Bedingungen*
 m|Kennung
 3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
@@ -107,18 +97,11 @@ m| Nutzung_Uferstreifen
 | 0.8
 | öffentlich
 4+| *Beziehungsattribute*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Geometrie*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Bedingungen*
-m| - - -
-3+| - - -
+4+| - - -
 |===
 
 ==== Klasse `+Methode_IGKB+`
@@ -127,7 +110,7 @@ Die Klasse `+Methode_IGKB+` ist eine Spezialisierung der Klasse `+Oekomorphologi
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
-m| Gesamtbeurteilung
+m| Gesamtbeurteilung_gewichtet
 | gewichtete Gesamtbeurteilung des Uferzustandes
 | 4.96
 | öffentlich
@@ -244,18 +227,11 @@ a| Code für den Strandrasen. Es gilt:
 | 5
 | öffentlich
 4+| *Beziehungsattribute*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Geometrie*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Bedingungen*
-m| - - -
-3+| - - -
+4+| - - -
 |===
 
 ==== Klasse `+Resultat_Plan_B_E_F+`
@@ -286,15 +262,9 @@ m| Bemerkung
 | Das ist eine Bemerkung
 | +++<span style="color:red;">intern</span>+++
 4+| *Beziehungsattribute*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Geometrie*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Bedingungen*
 m|Kennung
 3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
@@ -314,18 +284,11 @@ m| Oek_LS_Bedeutung
 | 1.1
 | öffentlich
 4+| *Beziehungsattribute*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Geometrie*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Bedingungen*
-m| - - -
-3+| - - -
+4+| - - -
 |===
 
 ==== Klasse `+Nutzen_Aufwand+`
@@ -339,18 +302,11 @@ m| Nutzen_NL_Aufwand
 | 3
 | öffentlich
 4+| *Beziehungsattribute*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Geometrie*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Bedingungen*
-m| - - -
-3+| - - -
+4+| - - -
 |===
 
 ==== Klasse `+Umsetzung+`
@@ -364,18 +320,11 @@ m| Zeitfenster_geplante_Umsetzung
 | 12
 | öffentlich
 4+| *Beziehungsattribute*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Geometrie*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Bedingungen*
-m| - - -
-3+| - - -
+4+| - - -
 |===
 
 ==== Klasse `+Resultat_Plan_C_D+`
@@ -406,15 +355,9 @@ m| Bemerkung
 | Das ist eine Bemerkung
 | +++<span style="color:red;">intern</span>+++
 4+| *Beziehungsattribute*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Geometrie*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Bedingungen*
 m|Kennung
 3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
@@ -435,21 +378,16 @@ a| Code für das Aufwertungspotential. Es gilt:
 * 1: gering
 * 2: mittel
 * 3: hoch
+
+Der in den Daten vereinzelt auftretende Wert "0" bedeutet "NULL" und bleibt unberücksichtigt.
 | 3
 | +++<span style="color:red;">intern</span>+++
 4+| *Beziehungsattribute*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Geometrie*
-m| - - -
-| - - -
-| - - -
-| - - -
+4+| - - -
 4+| *Bedingungen*
-m| - - -
-3+| - - -
+4+| - - -
 |===
 
 ==== Klasse `+Nutzen+`
@@ -464,6 +402,8 @@ a| Code für den GIS-basierten Nutzen. Es gilt:
 * 1: kein/gering
 * 2: mittel
 * 3: hoch
+
+Der in den Daten vereinzelt auftretende Wert "0" bedeutet "NULL" und bleibt unberücksichtigt.
 | 2
 | +++<span style="color:red;">intern</span>+++
 4+| *Beziehungsattribute*
