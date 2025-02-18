@@ -336,8 +336,8 @@ m| Zeitfenster_geplante_Umsetzung
 ==== Klasse `+Resultat_Plan_C_D+`
 Die Klasse `+Resultat_Plan_C_D+` führt die allgemeinen Attribute zur Beschreibung
 
-- des berechneten Aufwertungspotentials (Klasse `+Aufwertungspotential+`; entspricht Ablaufschritt "C" der Abbildung 2 in [todo]) und
-- des über GIS-Analysen berechneten Nutzens (Klasse `+Nutzen+`; entspricht Ablaufschritt "D" der Abbildung 2 in [todo]).
+- des berechneten Aufwertungspotentials (Klasse `+Aufwertungspotential+`; entspricht Ablaufschritt "C" in Abbildung 2 von <<allgemeines.adoc#doc-07,[7]>>) und
+- des über GIS-Analysen berechneten Nutzens (Klasse `+Nutzen+`; entspricht Ablaufschritt "D" in Abbildung 2 von <<allgemeines.adoc#doc-07,[7]>>).
 
 Die Klasse ist abstrakt und erweitert mit ihren beiden spezialisierten Klassen das Bundesmodell mit kantonalen Mehranforderungen. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen der Klassen `+OekomorphologieSeeufer+` oder `+Resultat_Plan_B_E_F+` übereinstimmen würden.
 
