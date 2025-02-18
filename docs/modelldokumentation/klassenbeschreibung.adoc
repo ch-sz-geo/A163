@@ -1,66 +1,6 @@
 == Klassenbeschreibung
 === Topic `+Stammdaten+`
-Das Topic `+Stammdaten+` umfasst alle statischen Werte. Darunter fallen z.B. die Aufzählwerte von Listen (INTERLIS-Datentyp «Aufzählung»). Jede Liste wird in einer eigenen Klasse modelliert.
-
-Die Stammdaten werden durch die zuständige Stelle vorgegeben. Bei Bundesthemen ist dies das für die Modellierung zuständige Bundesamt. Bei kantonalen Themen das zuständige kantonale Amt. Die Stammdaten von Bundesthemen können auf der Stufe Kanton erweiert werden. Die kantonalen Erweiterungen werden bei der Überführung ins Bundesmodell den entsprechenden Bundestypen zugeordnet.
-
-Die Stammdaten werden durch die Abteilung Geoinformation nachgeführt und im Internet veröffentlicht.
-
-==== Klasse `+Katalogeintrag+`
-Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte +Katalogeintrag+, sondern nur Objekte von den spezialisierten Klassen.
-
-[cols="10%, 60%, 20%, 10%",options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
-m| Code
-| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
-| in_Aenderung
-| öffentlich
-m| Name
-| Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird
-| in Änderung
-| öffentlich
-m| SortierNr
-| Reihenfolge des Katalogeintrages in der Auswahlliste
-| 1
-| öffentlich
-m| Bemerkung
-| Erläuterung, welche den Katalogeintrag näher beschreibt
-| Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
-| öffentlich
-|===
-
-==== Klasse `+Methode+`
-Die Klasse `+Methode+` führt die Werte der gleichnamigen Aufzählungen im Bundesmodell.
-
-[cols=4*,options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-4+| _Diese Klasse führt keine zusätzlichen Attribute_
-4+| *Bedingungen*
-m|Code
-3+| Die Werte müssen eindeutig sein.
-m|Name
-3+| Die Werte müssen eindeutig sein.
-|===
-
-==== Klasse `+Beurteilung+`
-Die Klasse `+Beurteilung+` führt die Werte der gleichnamigen Aufzählungen im Bundesmodell.
-
-[cols=4*,options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-4+| _Diese Klasse führt keine zusätzlichen Attribute_
-4+| *Bedingungen*
-m|Code
-3+| Die Werte müssen eindeutig sein.
-m|Name
-3+| Die Werte müssen eindeutig sein.
-|===
+Bei diesem Modell wird noch keine Überführung der Aufzählwerte in Stammdaten vorgenommen. Der Grund ist, dass die Datenerfassung zum Zeitpunkt der Modelldokumentation bereits abgeschlossen ist und die nächste Überarbeitung voraussichtlich ab dem Jahr 2035 stattfinden wird.
 
 === Topic `+Fachdaten+`
 Das Topic `+Fachdaten+` umfasst die fachlichen Klassen des Themas.
@@ -90,6 +30,10 @@ m| LinearpositionBis
 | Wert, bei dem der Abschnitt endet.
 | 13758.4
 | öffentlich
+m| Methode
+| vorgegebene Werte, welche die Methode benennen, anhand derer die Daten erhoben wurden
+| BAFU
+| öffentlich
 m| Bezeichnung_andere_Methode
 | falls Methode = ‘andere’, kann diese hier genauer beschreiben werden
 | CIPEL
@@ -97,6 +41,10 @@ m| Bezeichnung_andere_Methode
 m| Aufnahmezeitpunkt
 | Aufnahmezeitpunkt der Bildgrundlage, der Begehung oder Plänen, die der Erfassung zu Grunde liegt. Bei mehreren Beurteilungsgrundlagen mit unterschiedlichen Erstellungsdaten, ist das aktuellste Datum anzugeben vgl. (Niederberger et al., 2016)
 | 2019-07-31
+| öffentlich
+m| Gesamtbeurteilung
+| vorgegebene Werte als zusammenfassende Beurteilung aus den Methodeneinzelwerten
+| naturfremd
 | öffentlich
 m| Bildpfad
 | Verzeichnispfad, welcher auf das dem Abschnit zugeordneten Bild verweist
@@ -295,22 +243,6 @@ a| Code für den Strandrasen. Es gilt:
 * 5: sehr stark 
 | 5
 | öffentlich
-m| Aufwertungspotential
-a| Code für das Aufwertungspotential. Es gilt:
-
-* 1: gering
-* 2: mittel
-* 3: hoch
-| 3
-| öffentlich
-m| GISbasierter_Nutzen
-a| Code für den GIS-basierter Nutzen. Es gilt:
-
-* 1: kein/gering
-* 2: mittel
-* 3: hoch
-| 2
-| öffentlich
 4+| *Beziehungsattribute*
 m| - - -
 | - - -
@@ -444,6 +376,102 @@ m| - - -
 4+| *Bedingungen*
 m| - - -
 3+| - - -
+|===
+
+==== Klasse `+Resultat_Plan_C_D+`
+Die Klasse `+Resultat_Plan_C_D+` führt die  <todo>. Die Klasse ist abstrakt.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Kennung
+| Objektidentifikator +
+Aufbau: <Jahr>-<Monat>-<Tag>_<Laufnummer>
+| 2009-07-01_100023
+| öffentlich
+m| Achsgeometrie
+| Wert der Referenzgeometrie, auf welche sich der Abschnitt bezieht (vgl. Bedingungen unten)
+| 1013
+| öffentlich
+m| LinearpositionVon
+| Wert, ab dem der Abschnitt beginnt.
+| 13646.9
+| öffentlich
+m| LinearpositionBis
+| Wert, bei dem der Abschnitt endet.
+| 13758.4
+| öffentlich
+m| Bemerkung
+| Bemerkung zum Objekt
+| Das ist eine Bemerkung
+| +++<span style="color:red;">intern</span>+++
+4+| *Beziehungsattribute*
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Geometrie*
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Bedingungen*
+m|Kennung
+3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
+* Nach der Vergabe muss der Wert unverändert bleiben.
+m|Achsgeometrie
+3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili[SZ_Referenzgeometrie_Standgewaesser_V1] übereinstimmen.
+|===
+
+==== Klasse `+Aufwertungspotential+`
+Die Klasse `+Aufwertungspotential+` führt die berechneten Werte für das Aufwertungspotential. Sie ist eine Spezialisierung der Klasse `+Resultat_Plan_C_D+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| Aufwertungspotential
+a| Code für das Aufwertungspotential. Es gilt:
+
+* 1: gering
+* 2: mittel
+* 3: hoch
+| 3
+| +++<span style="color:red;">intern</span>+++
+4+| *Beziehungsattribute*
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Geometrie*
+m| - - -
+| - - -
+| - - -
+| - - -
+4+| *Bedingungen*
+m| - - -
+3+| - - -
+|===
+
+==== Klasse `+Nutzen+`
+Die Klasse `+Nutzen+` führt den aufgrund einer GIS-basierten Berechnung hergeleiteten Nutzen. Sie ist eine Spezialisierung der Klasse `+Resultat_Plan_C_D+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| GIS_basiert
+a| Code für den GIS-basierten Nutzen. Es gilt:
+
+* 1: kein/gering
+* 2: mittel
+* 3: hoch
+| 2
+| +++<span style="color:red;">intern</span>+++
+4+| *Beziehungsattribute*
+4+| - - -
+4+| *Geometrie*
+4+| - - -
+4+| *Bedingungen*
+4+| - - -
 |===
 
 ifdef::backend-pdf[]
