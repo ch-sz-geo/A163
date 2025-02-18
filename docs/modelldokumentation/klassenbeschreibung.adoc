@@ -8,7 +8,7 @@ Das Topic `+Fachdaten+` umfasst die fachlichen Klassen des Themas.
 Im kantonalen Modell verzichtet man auf die Klassen `+SeeKanton+` und `+UferlinieGeometrie+` des Bundesmodells. Zudem sind die Abschnitte linear referenziert. Die Attribute der linearen Referenzierung sind zu den entsprechenden Klassen hinzugefügt. Die für die lineare Referenzierung erforderliche Referenzgeometrie der Uferlinie entnehme man dem Datensatz A154 "Referenzgeometrie Standgewässer".
 
 ==== Klasse `+OekomorphologieSeeufer+`
-Die Klasse `+OekomorphologieSeeufer+` führt die Informationen zur Ökomorphologie des Seeufers. Die Klasse wird durch `+Methode_BAFU+` und `+Methode_IGKB+` spezialisiert.
+Die Klasse `+OekomorphologieSeeufer+` führt die Informationen zur Ökomorphologie des Seeufers. Die Klasse wird durch `+Methode_BAFU+` und `+Methode_IGKB+` spezialisiert. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen der Klassen `+Resultat_Plan_B_E_F+` oder `+Resultat_Plan_C_D+` übereinstimmen würden.
 
 [cols=4*,options="header"]
 |===
@@ -235,7 +235,13 @@ a| Code für den Strandrasen. Es gilt:
 |===
 
 ==== Klasse `+Resultat_Plan_B_E_F+`
-Die Klasse `+Resultat_Plan_B_E_F+` führt die  <todo>. Die Klasse ist abstrakt.
+Die Klasse `+Resultat_Plan_B_E_F+` führt die allgemeinen Attribute zur Beschreibung
+
+- der ökologischen und landschaftlichen Bedeutung (Klasse `+Oek_L_Bedeutung+`),
+- des Nutzens für Natur und Landschaft im Verhältnis zum Aufwand (Klasse `+Nutzen_Aufwand+`) und
+- der zeitlichen Priorisierung (Klasse `+Umsetzung+`).
+
+Die Klasse ist abstrakt. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen der Klassen `+OekomorphologieSeeufer+` oder `+Resultat_Plan_C_D+` übereinstimmen würden.
 
 [cols=4*,options="header"]
 |===
@@ -328,7 +334,12 @@ m| Zeitfenster_geplante_Umsetzung
 |===
 
 ==== Klasse `+Resultat_Plan_C_D+`
-Die Klasse `+Resultat_Plan_C_D+` führt die  <todo>. Die Klasse ist abstrakt.
+Die Klasse `+Resultat_Plan_C_D+` führt die allgemeinen Attribute zur Beschreibung
+
+- des berechneten Aufwertungspotentials (Klasse `+Aufwertungspotential+`; entspricht Ablaufschritt "C" der Abbildung 2 in [todo]) und
+- des über GIS-Analysen berechneten Nutzens (Klasse `+Nutzen+`; entspricht Ablaufschritt "D" der Abbildung 2 in [todo]).
+
+Die Klasse ist abstrakt und erweitert mit ihren beiden spezialisierten Klassen das Bundesmodell mit kantonalen Mehranforderungen. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen der Klassen `+OekomorphologieSeeufer+` oder `+Resultat_Plan_B_E_F+` übereinstimmen würden.
 
 [cols=4*,options="header"]
 |===
