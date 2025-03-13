@@ -3,6 +3,143 @@
 * Quellmodell: Das hier beschriebene Datenmodell
 * Zielmodell: http://models.geo.admin.ch/BAFU/Revitalisierung_Seen_V1_2.ili[Revitalisierung_Seen_V1_2 (Version: 2021-09-13)]
 
+==== Klasse `+SeeKanton+`
+Die Informationen zum See sind im Thema "Referenzgeometrie Standgewässer (A154)" beschrieben. Die Quellattribute stammen daher vom Modell [todo: Verlinkung].
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+SZ+` (fix)
+m| Kanton
+m| Ufergeometrie.Kennung
+m| ID_Uferlinie
+| - - -
+m| SeeKennung
+m| Ufergeometrie.Gewaessername
+m| Name_See
+| aus `+Ufergeometrie.Geometrie+` berechneter Wert
+m| Uferlinie_Laenge_m
+|===
+
+==== Klasse `+Uferlinie_Geometrie+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| dynamisch segmentierte Geometrie aus `+OekomorphologieSeeufer.Achsgeometrie+` und den Angaben zu `+OekomorphologieSeeufer.LinearpositionVon+` und `+OekomorphologieSeeufer.LinearpositionBis+`
+m| UferTeilstueck
+m| SZ_Referenzgeometrie_Standgewaesser_V1.Referenzgeometrie.Ufergeometrie.Publikationsdatum
+m| DatumUferlinie
+|===
+
+==== Klasse `+OekomorphologieSeeufer+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+SZ+` (fix)
+m| Kanton
+| `+Kanton+`
+m| ID_Uferlinie
+m| Methode
+m| Methode
+m| Bezeichnung_andere_Methode
+m| Bezeichnung_andere_Methode
+m| Aufnahmezeitpunkt
+m| Aufnahmezeitpunkt
+m| Gesamtbeurteilung
+m| Gesamtbeurteilung_Oekomorphologie
+|===
+
+==== Klasse `+Methode_BAFU+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+m| Oekomorphologie_Flachwasserzone
+m| RB
+m| Oekomorphologie_Uferstreifen
+m| RBUS
+m| Oekomorphologie_Uferstreifen
+m| RBFWZ
+m| Oekomorphologie_Uferlinie
+m| RBUL
+m| Oekomorphologie_Hinterland
+m| RBHL
+|===
+
+==== Klasse `+Methode_IGKB+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+m| Gesamtbeurteilung_gewichtet
+m| INDEX
+m| Uferlinie
+m| UFERLINIE
+m| Deltabildung
+m| DELTA
+m| Ufersubstrat
+m| UFERSUB
+m| Litoralsubstrat
+m| LITSUB
+m| Totholz
+m| TOTHOLZ
+m| Hindernisse
+m| HINDERNIS
+m| Uferverbauung
+m| UFERVERBAU
+m| Durchgaengigkeit
+m| BIODURCH
+m| Ufervegetation_landseitig
+m| UFERGEH
+m| Roehricht
+m| ROEHRICHT
+m| Makrophyten
+m| MAKROPHYT
+m| Veralgung
+m| ALGEN
+m| Stoerfrequenz
+m| REFUGIUM
+m| Kinderstube
+m| KINDERSTUB
+m| Anbindung_Hinterland
+m| HINTERLAND
+m| Ufertyp
+m| UFERTYP
+m| Breite_Flachwasserzone
+m| BREITEFWZ
+|===
+
+==== Klasse `+Resultat_Plan_B_E_F+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+SZ+` (fix)
+m| Kanton
+| `+Kanton+`
+m| ID_Uferlinie
+|===
+
+==== Klasse `+Oek_L_Bedeutung+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+SZ+` (fix)
+m| OEB
+|===
+
+==== Klasse `+Nutzen_Aufwand+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+SZ+` (fix)
+m| NUTZEN
+|===
+
+==== Klasse `+Umsetzung+`
+[cols=2*,options="header"]
+|===
+| Quellattribut | Zielattribut
+| `+SZ+` (fix)
+m| FRIST
+|===
+
 ==== Allgemeines
 Für die meisten Klassen gilt eine 1:1 Zuordnung zwischen dem kantonalen Modell und dem Bundesmodell. Die Ausnahmen sind im Datenmodell (Historie) beschrieben. Aus diesen Grund wird hier auf eine vollständige Dokumentation verzichtet.
 
