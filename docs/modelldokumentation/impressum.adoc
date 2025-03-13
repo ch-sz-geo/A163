@@ -21,7 +21,7 @@ Kuno Epper (Kep), AGI
 .Koreferat
 [%collapsible]
 ====
-[cols="10%, 10%, 10%, 70%"]
+[cols="20%, 20%, 30%, 30%"]
 |=======
 h| Version h| Datum h| Koreferent h| Prüfstelle
 | 2025-03-13 | 2025-03-13 | MS | AfG
@@ -31,7 +31,7 @@ h| Version h| Datum h| Koreferent h| Prüfstelle
 .referenzierte Dokumente
 [%collapsible]
 ====
-[cols="10%, 70%, 10%, 10%"]
+[cols="10%, 60%, 15%, 15%"]
 |=======
 h| Nr. h| Titel h| Autor(en) h| Version
 | [[doc-01]] [01] | https://www.fedlex.admin.ch/eli/cc/2008/388/de[Bundesgesetz über Geoinformation (GeoIG) (SR 510.62)] | Bund | 05.10.2007
