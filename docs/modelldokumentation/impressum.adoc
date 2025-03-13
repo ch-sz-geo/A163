@@ -12,9 +12,9 @@
 | ID nach kGeoiV | 191.2 
 | Beteiligte | Manuela Suter (MS), AfG + 
 Kuno Epper (Kep), AGI
-| Status a| - [x] Entwurf
+| Status a| - [ ] Entwurf
 - [ ] bereit für Vernehmlassung
-- [ ] gültig
+- [x] gültig
 |=======
 ====
 
@@ -24,7 +24,7 @@ Kuno Epper (Kep), AGI
 [cols="10%, 10%, 10%, 70%"]
 |=======
 h| Version h| Datum h| Koreferent h| Prüfstelle
-| 1.0 | 2001-01-01 | xy | Amt A
+| 2025-03-13 | 2025-03-13 | MS | AfG
 |=======
 ====
 
