@@ -229,17 +229,16 @@ th {
 <ul class="sectlevel2">
 <li><a href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.1. Transformation ins minimale Geodatenmodell des Bundes</a>
 <ul class="sectlevel3">
-<li><a href="#_klasse_seekanton">5.1.1. Klasse <code>SeeKanton</code></a></li>
-<li><a href="#_klasse_uferlinie_geometrie">5.1.2. Klasse <code>Uferlinie_Geometrie</code></a></li>
-<li><a href="#_klasse_oekomorphologieseeufer_2">5.1.3. Klasse <code>OekomorphologieSeeufer</code></a></li>
-<li><a href="#_klasse_methode_bafu_2">5.1.4. Klasse <code>Methode_BAFU</code></a></li>
-<li><a href="#_klasse_methode_igkb_2">5.1.5. Klasse <code>Methode_IGKB</code></a></li>
-<li><a href="#_klasse_resultat_plan_b_e_f_2">5.1.6. Klasse <code>Resultat_Plan_B_E_F</code></a></li>
-<li><a href="#_klasse_oek_l_bedeutung_2">5.1.7. Klasse <code>Oek_L_Bedeutung</code></a></li>
-<li><a href="#_klasse_nutzen_aufwand_2">5.1.8. Klasse <code>Nutzen_Aufwand</code></a></li>
-<li><a href="#_klasse_umsetzung_2">5.1.9. Klasse <code>Umsetzung</code></a></li>
-<li><a href="#_allgemeines_2">5.1.10. Allgemeines</a></li>
-<li><a href="#_klasse_uferlinie_geometrie_2">5.1.11. Klasse <code>Uferlinie_Geometrie</code></a></li>
+<li><a href="#_allgemeines_2">5.1.1. Allgemeines</a></li>
+<li><a href="#_klasse_seekanton">5.1.2. Klasse <code>SeeKanton</code></a></li>
+<li><a href="#_klasse_uferlinie_geometrie">5.1.3. Klasse <code>Uferlinie_Geometrie</code></a></li>
+<li><a href="#_klasse_oekomorphologieseeufer_2">5.1.4. Klasse <code>OekomorphologieSeeufer</code></a></li>
+<li><a href="#_klasse_methode_bafu_2">5.1.5. Klasse <code>Methode_BAFU</code></a></li>
+<li><a href="#_klasse_methode_igkb_2">5.1.6. Klasse <code>Methode_IGKB</code></a></li>
+<li><a href="#_klasse_resultat_plan_b_e_f_2">5.1.7. Klasse <code>Resultat_Plan_B_E_F</code></a></li>
+<li><a href="#_klasse_oek_l_bedeutung_2">5.1.8. Klasse <code>Oek_L_Bedeutung</code></a></li>
+<li><a href="#_klasse_nutzen_aufwand_2">5.1.9. Klasse <code>Nutzen_Aufwand</code></a></li>
+<li><a href="#_klasse_umsetzung_2">5.1.10. Klasse <code>Umsetzung</code></a></li>
 </ul>
 </li>
 </ul>
@@ -2065,9 +2064,15 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </ul>
 </div>
 <div class="sect3">
-<h4 id="_klasse_seekanton"><a class="anchor" href="#_klasse_seekanton"></a><a class="link" href="#_klasse_seekanton">5.1.1. Klasse <code>SeeKanton</code></a></h4>
+<h4 id="_allgemeines_2"><a class="anchor" href="#_allgemeines_2"></a><a class="link" href="#_allgemeines_2">5.1.1. Allgemeines</a></h4>
 <div class="paragraph">
-<p>Die Informationen zum See sind im Thema "Referenzgeometrie Standgewässer (A154)" beschrieben. Die Quellattribute stammen daher vom Modell [todo: Verlinkung].</p>
+<p>Die letzte Klasse <code>Resultat_Plan_C_D</code> ist nicht Teil des Bundesmodells und kann hier vernachlässigt werden. Die beiden Klassen <code>OekomorphologieSeeufer</code> und <code>Resultat_Plan_B_E_F</code> weisen im Bundesmodell eine Beziehung zur Klasse <code>Uferlinie_Geometrie</code> auf. Damit wäre es möglich, dass sich Objekte der beiden Klassen auf die gleiche Uferliniengeometrie beziehen, was im kantonalen Modell nicht der Fall ist. Bei der Überführung der Daten ins Bundesmodell liegt es im Ermessen der zuständigen Person, ob sie gleiche Uferlinienstücke redundanzfrei abfüllt oder gleiche Abschnitte mehrfach einträgt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_klasse_seekanton"><a class="anchor" href="#_klasse_seekanton"></a><a class="link" href="#_klasse_seekanton">5.1.2. Klasse <code>SeeKanton</code></a></h4>
+<div class="paragraph">
+<p>Die Informationen zum See sind im Thema "Referenzgeometrie Standgewässer (A154)" beschrieben. Die Quellattribute stammen daher von diesem Modell.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2086,7 +2091,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kanton</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ufergeometrie.Kennung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Referenzgeometrie_Standgewaesser_V1.Referenzgeometrie.Ufergeometrie.Kennung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ID_Uferlinie</code></p></td>
 </tr>
 <tr>
@@ -2094,7 +2099,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SeeKennung</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ufergeometrie.Gewaessername</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Referenzgeometrie_Standgewaesser_V1.Referenzgeometrie.Ufergeometrie.Gewaessername</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name_See</code></p></td>
 </tr>
 <tr>
@@ -2105,7 +2110,10 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_uferlinie_geometrie"><a class="anchor" href="#_klasse_uferlinie_geometrie"></a><a class="link" href="#_klasse_uferlinie_geometrie">5.1.2. Klasse <code>Uferlinie_Geometrie</code></a></h4>
+<h4 id="_klasse_uferlinie_geometrie"><a class="anchor" href="#_klasse_uferlinie_geometrie"></a><a class="link" href="#_klasse_uferlinie_geometrie">5.1.3. Klasse <code>Uferlinie_Geometrie</code></a></h4>
+<div class="paragraph">
+<p>Die Informationen zum See sind im Thema "Referenzgeometrie Standgewässer (A154)" beschrieben. Die Quellattribute stammen daher von diesem Modell.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2130,7 +2138,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_oekomorphologieseeufer_2"><a class="anchor" href="#_klasse_oekomorphologieseeufer_2"></a><a class="link" href="#_klasse_oekomorphologieseeufer_2">5.1.3. Klasse <code>OekomorphologieSeeufer</code></a></h4>
+<h4 id="_klasse_oekomorphologieseeufer_2"><a class="anchor" href="#_klasse_oekomorphologieseeufer_2"></a><a class="link" href="#_klasse_oekomorphologieseeufer_2">5.1.4. Klasse <code>OekomorphologieSeeufer</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2171,7 +2179,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_methode_bafu_2"><a class="anchor" href="#_klasse_methode_bafu_2"></a><a class="link" href="#_klasse_methode_bafu_2">5.1.4. Klasse <code>Methode_BAFU</code></a></h4>
+<h4 id="_klasse_methode_bafu_2"><a class="anchor" href="#_klasse_methode_bafu_2"></a><a class="link" href="#_klasse_methode_bafu_2">5.1.5. Klasse <code>Methode_BAFU</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2208,7 +2216,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_methode_igkb_2"><a class="anchor" href="#_klasse_methode_igkb_2"></a><a class="link" href="#_klasse_methode_igkb_2">5.1.5. Klasse <code>Methode_IGKB</code></a></h4>
+<h4 id="_klasse_methode_igkb_2"><a class="anchor" href="#_klasse_methode_igkb_2"></a><a class="link" href="#_klasse_methode_igkb_2">5.1.6. Klasse <code>Methode_IGKB</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2297,7 +2305,10 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_resultat_plan_b_e_f_2"><a class="anchor" href="#_klasse_resultat_plan_b_e_f_2"></a><a class="link" href="#_klasse_resultat_plan_b_e_f_2">5.1.6. Klasse <code>Resultat_Plan_B_E_F</code></a></h4>
+<h4 id="_klasse_resultat_plan_b_e_f_2"><a class="anchor" href="#_klasse_resultat_plan_b_e_f_2"></a><a class="link" href="#_klasse_resultat_plan_b_e_f_2">5.1.7. Klasse <code>Resultat_Plan_B_E_F</code></a></h4>
+<div class="paragraph">
+<p>Die Informationen zum See sind im Thema "Referenzgeometrie Standgewässer (A154)" beschrieben. Das Quellattribut zu <code>ID_Uferlinie</code> stammt daher von diesem Modell.</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2315,14 +2326,14 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kanton</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kanton</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ_Referenzgeometrie_Standgewaesser_V1.Referenzgeometrie.Ufergeometrie.Kennung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ID_Uferlinie</code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_oek_l_bedeutung_2"><a class="anchor" href="#_klasse_oek_l_bedeutung_2"></a><a class="link" href="#_klasse_oek_l_bedeutung_2">5.1.7. Klasse <code>Oek_L_Bedeutung</code></a></h4>
+<h4 id="_klasse_oek_l_bedeutung_2"><a class="anchor" href="#_klasse_oek_l_bedeutung_2"></a><a class="link" href="#_klasse_oek_l_bedeutung_2">5.1.8. Klasse <code>Oek_L_Bedeutung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2336,14 +2347,14 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ</code> (fix)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Oek_LS_Bedeutung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>OEB</code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_nutzen_aufwand_2"><a class="anchor" href="#_klasse_nutzen_aufwand_2"></a><a class="link" href="#_klasse_nutzen_aufwand_2">5.1.8. Klasse <code>Nutzen_Aufwand</code></a></h4>
+<h4 id="_klasse_nutzen_aufwand_2"><a class="anchor" href="#_klasse_nutzen_aufwand_2"></a><a class="link" href="#_klasse_nutzen_aufwand_2">5.1.9. Klasse <code>Nutzen_Aufwand</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2357,14 +2368,14 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ</code> (fix)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nutzen_NL_Aufwand</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>NUTZEN</code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_umsetzung_2"><a class="anchor" href="#_klasse_umsetzung_2"></a><a class="link" href="#_klasse_umsetzung_2">5.1.9. Klasse <code>Umsetzung</code></a></h4>
+<h4 id="_klasse_umsetzung_2"><a class="anchor" href="#_klasse_umsetzung_2"></a><a class="link" href="#_klasse_umsetzung_2">5.1.10. Klasse <code>Umsetzung</code></a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2378,52 +2389,11 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SZ</code> (fix)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Zeitfenster_geplante_Umsetzung</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>FRIST</code></p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect3">
-<h4 id="_allgemeines_2"><a class="anchor" href="#_allgemeines_2"></a><a class="link" href="#_allgemeines_2">5.1.10. Allgemeines</a></h4>
-<div class="paragraph">
-<p>Für die meisten Klassen gilt eine 1:1 Zuordnung zwischen dem kantonalen Modell und dem Bundesmodell. Die Ausnahmen sind im Datenmodell (Historie) beschrieben. Aus diesen Grund wird hier auf eine vollständige Dokumentation verzichtet.</p>
-</div>
-<div class="paragraph">
-<p>Auf zwei Punkte sei hingewiesen:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Umgang mit den Werten für die Klasse <code>Uferlinie_Geometrie</code> und</p>
-</li>
-<li>
-<p>Umgang mit den kantonalen Erweiterungen.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_klasse_uferlinie_geometrie_2"><a class="anchor" href="#_klasse_uferlinie_geometrie_2"></a><a class="link" href="#_klasse_uferlinie_geometrie_2">5.1.11. Klasse <code>Uferlinie_Geometrie</code></a></h4>
-<div class="paragraph">
-<p>Die Klasse <code>Uferlinie_Geometrie</code> enthält die Teillinien des Seeufers. Im kantonalen Modell sind diese linear referenziert und auf drei Klassen modelliert. Dies kann zu Redundanzen führen. Die Klassen sind:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>OekomorphologieSeeufer</code></p>
-</li>
-<li>
-<p><code>Resultat_Plan_B_E_F</code></p>
-</li>
-<li>
-<p><code>Resultat_Plan_C_D</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Die letzte Klasse <code>Resultat_Plan_C_D</code> ist nicht Teil des Bundesmodells und kann hier vernachlässigt werden. Die beiden anderen Klassen <code>OekomorphologieSeeufer</code> und <code>Resultat_Plan_B_E_F</code> weisen im Bundesmodell eine Beziehung zur Klasse <code>Uferlinie_Geometrie</code> auf. Damit wäre es möglich, dass sich Objekte der beiden Klassen auf die gleiche Uferliniengeometrie beziehen, was im kantonalen Modell nicht der Fall ist. Bei der Überführung der Daten ins Bundesmodell liegt es im Ermessen der zuständigen Person, ob sie gleiche Uferlinienstücke redundanzfrei abfüllt oder gleiche Abschnitte mehrfach einträgt.</p>
-</div>
 </div>
 </div>
 </div>
@@ -2431,7 +2401,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-13 10:27:57 UTC
+Last updated 2025-03-13 12:32:22 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
