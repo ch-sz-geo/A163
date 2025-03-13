@@ -31,7 +31,7 @@ m| LinearpositionBis
 | 13758.4
 | öffentlich
 m| Methode
-| vorgegebene Werte, welche die Methode benennen, anhand derer die Daten erhoben wurden
+| vorgegebene Werte aus der Aufzählung `+Methode+`, welche die Methode benennen, anhand derer die Daten erhoben wurden
 | BAFU
 | öffentlich
 m| Bezeichnung_andere_Methode
@@ -43,7 +43,7 @@ m| Aufnahmezeitpunkt
 | 2019-07-31
 | öffentlich
 m| Gesamtbeurteilung
-| vorgegebene Werte als zusammenfassende Beurteilung aus den Methodeneinzelwerten
+| vorgegebene Werte aus der Aufzählung `+Beurteilung+` als zusammenfassende Beurteilung aus den Methodeneinzelwerten
 | naturfremd
 | öffentlich
 m| Bildpfad
@@ -73,23 +73,53 @@ Die Klasse `+Methode_BAFU+` ist eine Spezialisierung der Klasse `+Oekomorphologi
 |===
 | Name | Beschreibung | Beispiel | Freigabe
 m| Oekomorphologie_gesamt
-| Beurteilung der Ökomorphologie gesamthaft
-| 0.9
+a| Beurteilung der Ökomorphologie gesamthaft. Es gilt:
+
+* 0.8 – 1 = naturnah, natürlich
+* 0.6 - <0.8 = wenig beeinträchtigt
+* 0.4  -<0.6 = beeinträchtigt
+* 0.2 - <0.4 = naturfremd
+* 0.0 - <0.2 = künstlich
+| 0.8
 | öffentlich
 m| Oekomorphologie_Flachwasserzone
-| Beurteilung der Ökomorphologie der Flachwasserzone
+a| Beurteilung der Ökomorphologie der Flachwasserzone. Es gilt:
+
+* 0.8 – 1 = naturnah, natürlich
+* 0.6 - <0.8 = wenig beeinträchtigt
+* 0.4  -<0.6 = beeinträchtigt
+* 0.2 - <0.4 = naturfremd
+* 0.0 - <0.2 = künstlich
 | 0.8
 | öffentlich
 m| Oekomorphologie_Uferstreifen
-| Beurteilung der Ökomorphologie des Uferstreifens
+a| Beurteilung der Ökomorphologie des Uferstreifens. Es gilt:
+
+* 0.8 – 1 = naturnah, natürlich
+* 0.6 - <0.8 = wenig beeinträchtigt
+* 0.4  -<0.6 = beeinträchtigt
+* 0.2 - <0.4 = naturfremd
+* 0.0 - <0.2 = künstlich
 | 0.7
 | öffentlich
 m| Oekomorphologie_Uferlinie
-| Beurteilung der Ökomorphologie der Uferlinie
+a| Beurteilung der Ökomorphologie der Uferlinie. Es gilt:
+
+* 0.8 – 1 = naturnah, natürlich
+* 0.6 - <0.8 = wenig beeinträchtigt
+* 0.4  -<0.6 = beeinträchtigt
+* 0.2 - <0.4 = naturfremd
+* 0.0 - <0.2 = künstlich
 | 0.9
 | öffentlich
 m| Oekomorphologie_Hinterland
-| Beurteilung der Ökomorphologie des Hinterlandes
+a| Beurteilung der Ökomorphologie des Hinterlandes. Es gilt:
+
+* 0.8 – 1 = naturnah, natürlich
+* 0.6 - <0.8 = wenig beeinträchtigt
+* 0.4  -<0.6 = beeinträchtigt
+* 0.2 - <0.4 = naturfremd
+* 0.0 - <0.2 = künstlich
 | 0.5
 | öffentlich
 m| Nutzung_Uferstreifen
@@ -115,67 +145,163 @@ m| Gesamtbeurteilung_gewichtet
 | 4.96
 | öffentlich
 m| Uferlinie
-| Indexwert für die naturnahe Uferlinie in Abweichung vom Referenzzustand
+a| Indexwert für die naturnahe Uferlinie in Abweichung vom Referenzzustand. Es gilt:
+
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | 4
 | öffentlich
 m| Deltabildung
-| Indexwert für die Deltabildung
+a| Indexwert für die Deltabildung. Es gilt:
+
+* -1 = nicht relevant
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | 3
 | öffentlich
 m| Ufersubstrat
-| Indexwert für das Ufersubstrat
+a| Indexwert für das Ufersubstrat. Es gilt:
+
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | 5
 | öffentlich
 m| Litoralsubstrat
-| Indexwert für das Litoralsubstrat
+a| Indexwert für das Litoralsubstrat. Es gilt:
+
+* -1 = nicht relevant
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | -1
 | öffentlich
 m| Totholz
-| Indexwert für das Totholz
+a| Indexwert für das Totholz. Es gilt:
+
+* -1 = nicht zu erwarten
+* 1 = sehr gering
+* 3 = mässig
+* 5 = sehr stark
 | 1
 | öffentlich
 m| Hindernisse
-| Indexwert für die Hindernisse
+a| Indexwert für die Hindernisse. Es gilt:
+
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | 4
 | öffentlich
 m| Uferverbauung
-| Indexwert für die Uferverbauung
+a| Indexwert für die Uferverbauung. Es gilt:
+
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | 3
 | öffentlich
 m| Durchgaengigkeit
-| Indexwert für die biologische Durchgängigkeit
+a| Indexwert für die biologische Durchgängigkeit. Es gilt:
+
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | -1
 | öffentlich
 m| Ufervegetation_landseitig
-| Indexwert für die landseitige Ufervegetation bzw. -gehölz
+a| Indexwert für die landseitige Ufervegetation bzw. -gehölz. Es gilt:
+
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | 3
 | öffentlich
 m| Roehricht
-| Indexwert für den Röhricht
+a| Indexwert für den Röhricht. Es gilt:
+
+* -1 = nicht zu erwarten
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | -1
 | öffentlich
 m| Makrophyten
-| Indexwert für die Makrophyten
+a| Indexwert für die Makrophyten. Es gilt:
+
+* -1 = nicht zu erwarten
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | -1
 | öffentlich
 m| Veralgung
-| Indexwert für die Veralgung
+a| Indexwert für die Veralgung. Es gilt:
+
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | 5
 | öffentlich
 m| Stoerfrequenz
-| Indexwert für die Störfrequenz
+a| Indexwert für die Störfrequenz. Es gilt:
+
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | 3
 | öffentlich
 m| Kinderstube
-| Indexwert für die Kinderstube
+a| Indexwert für die Kinderstube. Es gilt:
+
+* 1 = Jungfisch und Strukturen
+* 3 = Jungfisch oder Strukturen
+* 5 = weder Jungfisch noch Strukturen
 | 4
 | öffentlich
 m| Anbindung_Hinterland
-| Indexwert für die Anbindung des Hinterlandes
+a| Indexwert für die Anbindung des Hinterlandes. Es gilt:
+
+* 1 = sehr gering
+* 2 = gering
+* 3 = mässig
+* 4 = stark
+* 5 = sehr stark
 | 4
 | öffentlich
 m| Ufertyp
-| Indexwert für den Ufertyp
+a| Indexwert für den Ufertyp. Es gilt:
+
+* 1 = Steilufer
+* 2 = mittelsteiles Ufer
+* 3 = Flachufer
+* 4= sehr steiles Ufer
 | 3
 | öffentlich
 m| Breite_Flachwasserzone
@@ -186,32 +312,38 @@ m| Treibgut
 a| Code für das Treibgut. Es gilt:
 
 * 1: sehr gering
-* 2: gering 
-* 3: mässig 
-* 4: stark 
-* 5: sehr stark 
+* 2: gering
+* 3: mässig
+* 4: stark
+* 5: sehr stark
 | 4
 | öffentlich
 m| Erosion
 a| Code für die Erosion. Es gilt:
 
 * 1: sehr gering
-* 2: gering 
-* 3: mässig 
-* 4: stark 
-* 5: sehr stark 
+* 2: gering
+* 3: mässig
+* 4: stark
+* 5: sehr stark
 | 2
 | öffentlich
 m| Erholung
-| Indexwert für die Erholung
+a| Indexwert für die Erholung und Freizeitnutzung. Es gilt:
+
+* 1: sehr gut
+* 3: gut
+* 5: mässig
+* 96: nicht relevant (= Ufer nicht zugänglich)
+* 99: unbekannt
 | -1
 | öffentlich
 m| Kulturwert
 a| Code für den Kulturwert. Es gilt:
 
 * -1: nicht relevant
-* 1: gering 
-* 2: mässig 
+* 1: gering
+* 2: mässig
 * 3: gross
 | 2
 | öffentlich
@@ -219,11 +351,11 @@ m| Strandrasen
 a| Code für den Strandrasen. Es gilt:
 
 * -1: nicht relevant
-* 1: sehr gering 
-* 2: gering 
-* 3: mässig 
-* 4: stark 
-* 5: sehr stark 
+* 1: sehr gering
+* 2: gering
+* 3: mässig
+* 4: stark
+* 5: sehr stark
 | 5
 | öffentlich
 4+| *Beziehungsattribute*
@@ -286,7 +418,7 @@ Die Klasse `+Oek_L_Bedeutung+` führt die Information über die ökologische und
 |===
 | Name | Beschreibung | Beispiel | Freigabe
 m| Oek_LS_Bedeutung
-| Faktor der ökologischen und landschaftlichen Bedeutung
+| ökologische und landschaftliche Bedeutung; Faktor zwischen 0.7 und 1.3
 | 1.1
 | öffentlich
 4+| *Beziehungsattribute*
@@ -304,7 +436,11 @@ Die Klasse `+Nutzen_Aufwand+` führt die Information über den Nutzen für Natur
 |===
 | Name | Beschreibung | Beispiel | Freigabe
 m| Nutzen_NL_Aufwand
-| klassifizierter Nutzen für Natur und Landschaft im Verhältnis zum Aufwand
+a| klassifizierter Nutzen für Natur und Landschaft im Verhältnis zum Aufwand. Es gilt:
+
+* 1: gering
+* 2: mittel
+* 3: hoch
 | 3
 | öffentlich
 4+| *Beziehungsattribute*
@@ -322,8 +458,18 @@ Die Klasse `+Umsetzung+` führt die Umsetzungsfristen. Sie ist eine Spezialisier
 |===
 | Name | Beschreibung | Beispiel | Freigabe
 m| Zeitfenster_geplante_Umsetzung
-| codierter Wert der Umsetzungsfrist
-| 12
+a| Codierter Wert der Umsetzungsfrist. Es gilt:
+
+* 0: nicht bestimmt
+* 1: bis 2024
+* 2: 2025-2028
+* 3: 2029-2032
+* 4: 2033-2036
+* 5: 2037-2040
+* 6: 2041 oder später
+
+Hinweis: Während der Datenerfassung änderte der Bund die Werte für die Umsetzungsfrist. Im Sinne der Einheitlichkeit entschied man, die Datenerfassung mit den alten Werten abzuschliessen.
+| 4
 | öffentlich
 4+| *Beziehungsattribute*
 4+| - - -
