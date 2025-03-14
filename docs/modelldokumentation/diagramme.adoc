@@ -5,6 +5,8 @@ image::../img/Komponentendiagramm.png[]
 === Klassendiagramm
 image::../img/Klassendiagramm.png[]
 
+image::../img/Legende Klassendiagramm.png[width=350]
+
 ifdef::backend-pdf[]
 <<<
 endif::[]
