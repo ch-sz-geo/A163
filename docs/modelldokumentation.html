@@ -2071,13 +2071,19 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 <div class="sect3">
 <h4 id="_allgemeines_2"><a class="anchor" href="#_allgemeines_2"></a><a class="link" href="#_allgemeines_2">5.1.1. Allgemeines</a></h4>
 <div class="paragraph">
-<p>Die letzte Klasse <code>Resultat_Plan_C_D</code> ist nicht Teil des Bundesmodells und kann hier vernachlässigt werden. Die beiden Klassen <code>OekomorphologieSeeufer</code> und <code>Resultat_Plan_B_E_F</code> weisen im Bundesmodell eine Beziehung zur Klasse <code>Uferlinie_Geometrie</code> auf. Damit wäre es möglich, dass sich Objekte der beiden Klassen auf die gleiche Uferliniengeometrie beziehen, was im kantonalen Modell nicht der Fall ist. Bei der Überführung der Daten ins Bundesmodell liegt es im Ermessen der zuständigen Person, ob sie gleiche Uferlinienstücke redundanzfrei abfüllt oder gleiche Abschnitte mehrfach einträgt.</p>
+<p>Die beiden Klassen <code>OekomorphologieSeeufer</code> und <code>Resultat_Plan_B_E_F</code> weisen im Bundesmodell eine Beziehung zur Klasse <code>Uferlinie_Geometrie</code> auf. Damit wäre es möglich, dass sich Objekte der beiden Klassen auf die gleiche Uferliniengeometrie beziehen, was im kantonalen Modell nicht der Fall ist. Bei der Überführung der Daten ins Bundesmodell liegt es im Ermessen der zuständigen Person, ob sie gleiche Uferlinienstücke redundanzfrei abfüllt oder gleiche Abschnitte mehrfach einträgt.</p>
+</div>
+<div class="paragraph">
+<p>Die Klasse <code>Resultat_Plan_C_D</code> ist nicht Teil des Bundesmodells und bleibt nachfolgend unbehandelt.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_klasse_seekanton"><a class="anchor" href="#_klasse_seekanton"></a><a class="link" href="#_klasse_seekanton">5.1.2. Klasse <code>SeeKanton</code></a></h4>
 <div class="paragraph">
-<p>Die Informationen zum See sind im Thema "Referenzgeometrie Standgewässer (A154)" beschrieben. Die Quellattribute stammen daher von diesem Modell.</p>
+<p>Die Informationen zum See sind im Thema "Referenzgeometrie Standgewässer (A154)" beschrieben. Die Quellattribute stammen von diesem Modell.</p>
+</div>
+<div class="paragraph">
+<p>Die Bezeichnung des Attributs erfolgt nach dem Muster &lt;Modellname&gt;.&lt;Topicname&gt;.&lt;Klassenname&gt;.&lt;Attributname&gt;.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2406,7 +2412,7 @@ Aufbau: &lt;Jahr&gt;-&lt;Monat&gt;-&lt;Tag&gt;_&lt;Laufnummer&gt;</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-14 06:16:40 UTC
+Last updated 2025-03-14 06:24:58 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
