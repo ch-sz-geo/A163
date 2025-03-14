@@ -8,7 +8,7 @@ Das Topic `+Fachdaten+` umfasst die fachlichen Klassen des Themas.
 Im kantonalen Modell verzichtet man auf die Klassen `+SeeKanton+` und `+UferlinieGeometrie+` des Bundesmodells. Zudem sind die Abschnitte linear referenziert. Die Attribute der linearen Referenzierung sind zu den entsprechenden Klassen hinzugefügt. Die für die lineare Referenzierung erforderliche Referenzgeometrie der Uferlinie entnehme man dem Datensatz A154 "Referenzgeometrie Standgewässer".
 
 ==== Klasse `+OekomorphologieSeeufer+`
-Die Klasse `+OekomorphologieSeeufer+` führt die Informationen zur Ökomorphologie des Seeufers. Die Klasse wird durch `+Methode_BAFU+` und `+Methode_IGKB+` spezialisiert. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen der Klassen `+Resultat_Plan_B_E_F+` oder `+Resultat_Plan_C_D+` übereinstimmen würden.
+Die Klasse `+OekomorphologieSeeufer+` führt die Informationen zur Ökomorphologie des Seeufers. Die Klasse wird durch `+Methode_BAFU+` und `+Methode_IGKB+` spezialisiert. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen Abschnitten der Klassen `+Resultat_Plan_B_E_F+` oder `+Resultat_Plan_C_D+` übereinstimmen würden.
 
 [cols=4*,options="header"]
 |===
@@ -63,7 +63,7 @@ m|Kennung
 3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
 * Nach der Vergabe muss der Wert unverändert bleiben.
 m|Achsgeometrie
-3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili[SZ_Referenzgeometrie_Standgewaesser_V1] übereinstimmen.
+3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells "SZ_Referenzgeometrie_Standgewaesser_V1" (A154) übereinstimmen.
 |===
 
 ==== Klasse `+Methode_BAFU+`
@@ -367,13 +367,13 @@ a| Code für den Strandrasen. Es gilt:
 |===
 
 ==== Klasse `+Resultat_Plan_B_E_F+`
-Die Klasse `+Resultat_Plan_B_E_F+` führt die allgemeinen Attribute zur Beschreibung
+Die Klasse `+Resultat_Plan_B_E_F+` führt die allgemeinen Attribute zur Beschreibung:
 
 - der ökologischen und landschaftlichen Bedeutung (Klasse `+Oek_L_Bedeutung+`),
 - des Nutzens für Natur und Landschaft im Verhältnis zum Aufwand (Klasse `+Nutzen_Aufwand+`) und
 - der zeitlichen Priorisierung (Klasse `+Umsetzung+`).
 
-Die Klasse ist abstrakt. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen der Klassen `+OekomorphologieSeeufer+` oder `+Resultat_Plan_C_D+` übereinstimmen würden.
+Die Klasse ist abstrakt. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen Abschnitten der Klassen `+OekomorphologieSeeufer+` oder `+Resultat_Plan_C_D+` übereinstimmen würden.
 
 [cols=4*,options="header"]
 |===
@@ -408,7 +408,7 @@ m|Kennung
 3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
 * Nach der Vergabe muss der Wert unverändert bleiben.
 m|Achsgeometrie
-3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili[SZ_Referenzgeometrie_Standgewaesser_V1] übereinstimmen.
+3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells "SZ_Referenzgeometrie_Standgewaesser_V1" (A154) übereinstimmen.
 |===
 
 ==== Klasse `+Oek_L_Bedeutung+`
@@ -480,12 +480,12 @@ Hinweis: Während der Datenerfassung änderte der Bund die Werte für die Umsetz
 |===
 
 ==== Klasse `+Resultat_Plan_C_D+`
-Die Klasse `+Resultat_Plan_C_D+` führt die allgemeinen Attribute zur Beschreibung
+Die Klasse `+Resultat_Plan_C_D+` führt die allgemeinen Attribute zur Beschreibung:
 
 - des berechneten Aufwertungspotentials (Klasse `+Aufwertungspotential+`; entspricht Ablaufschritt "C" in Abbildung 2 von <<allgemeines.adoc#doc-07,[7]>>) und
 - des über GIS-Analysen berechneten Nutzens (Klasse `+Nutzen+`; entspricht Ablaufschritt "D" in Abbildung 2 von <<allgemeines.adoc#doc-07,[7]>>).
 
-Die Klasse ist abstrakt und erweitert mit ihren beiden spezialisierten Klassen das Bundesmodell mit kantonalen Mehranforderungen. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen der Klassen `+OekomorphologieSeeufer+` oder `+Resultat_Plan_B_E_F+` übereinstimmen würden.
+Die Klasse ist abstrakt und erweitert mit ihren beiden spezialisierten Klassen das Bundesmodell mit kantonalen Mehranforderungen. Der Einfachheit halber wird in dieser Klasse ein eigener Raumbezug hergestellt, auch wenn die Seeuferabschnitte mit anderen Abschnitten der Klassen `+OekomorphologieSeeufer+` oder `+Resultat_Plan_B_E_F+` übereinstimmen würden.
 
 [cols=4*,options="header"]
 |===
@@ -520,7 +520,7 @@ m|Kennung
 3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
 * Nach der Vergabe muss der Wert unverändert bleiben.
 m|Achsgeometrie
-3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells https://models.geo.sz.ch/AFG/SZ_Referenzgeometrie_Standgewaesser_V1.ili[SZ_Referenzgeometrie_Standgewaesser_V1] übereinstimmen.
+3+| Der Wert muss mit dem Wert in `+Ufergeometrie.Kennung+` des Datenmodells "SZ_Referenzgeometrie_Standgewaesser_V1" (A154) übereinstimmen.
 |===
 
 ==== Klasse `+Aufwertungspotential+`
