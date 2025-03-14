@@ -1,13 +1,13 @@
 == Modellbeschreibung
 
-Die Kantone sind verpflichtet, Revitalisierungen strategisch zu planen. Neben den Fliessgewässern gilt dies auch für die Seeufer (Art 38a GSchG; Art. 41d GSchV) <<allgemeines.adoc#doc-05,[5]>>. Die Planungen werden alle 12 Jahre aktualisiert. Erstmals wurde die Planung 2022 im Kanton Schwyz verabschiedet. Gemäss minimalen Geodatenmodell (MGDM) «Planung der Revitalisierungen von Seeufern» (ID 191.2) sind folgende Bereicht Teil der Datenerfassung:
+Die Kantone sind verpflichtet, Revitalisierungen strategisch zu planen. Neben den Fliessgewässern gilt dies auch für die Seeufer (Art 38a GSchG; Art. 41d GSchV) <<allgemeines.adoc#doc-05,[5]>>. Die Planungen werden alle 12 Jahre aktualisiert. Erstmals wurde die Planung 2022 im Kanton Schwyz verabschiedet. Gemäss minimalen Geodatenmodell (MGDM) «Planung der Revitalisierungen von Seeufern» (ID 191.2) sind folgende Bereiche Teil der Datenerfassung:
 
 * ökomorphologische Bewertung der Seeufer
 * ökologische und landschaftliche Bedeutung
 * Nutzen für Natur und Landschaft im Verhältnis zum Aufwand
 * Zeitfenster der geplanten Umsetzungen 
 
-Das kantonale Geodatenmodell «Planung der Revitalisierung von Seeufern (A163)» stellt die kantonale Konkretisierung des entsprechenden minimalen Geodatenmodells des Bundes <<allgemeines.adoc#doc-07,[7]>> dar. Es entspricht im Wesentlichen jenem des Bundes. Dementsprechend gilt auch die Modellbeschreibung des Bundes. Anpassungen im kantonalen Modell stellen die lineare Referenzierung der Daten und die Ergänzung der Klasse `+Resultat_Plan_C_D+ dar.
+Das kantonale Geodatenmodell «Planung der Revitalisierung von Seeufern (A163)» stellt die kantonale Konkretisierung des entsprechenden minimalen Geodatenmodells des Bundes <<allgemeines.adoc#doc-07,[7]>> dar. Es entspricht im Wesentlichen jenem des Bundes. Dementsprechend gilt auch die Modellbeschreibung des Bundes. Anpassungen im kantonalen Modell stellen die lineare Referenzierung der Daten und die Ergänzung der Klasse `+Resultat_Plan_C_D+` dar.
 
 ifdef::backend-pdf[]
 <<<
