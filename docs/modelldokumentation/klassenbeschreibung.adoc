@@ -1,6 +1,6 @@
 == Klassenbeschreibung
 === Topic `+Stammdaten+`
-Bei diesem Modell wird noch keine Überführung der Aufzählwerte in Stammdaten vorgenommen. Der Grund ist, dass die Datenerfassung zum Zeitpunkt der Modelldokumentation bereits abgeschlossen ist und die nächste Überarbeitung voraussichtlich ab dem Jahr 2035 stattfinden wird. (todo)
+Bei diesem Modell wird noch keine Überführung der Aufzählwerte in Stammdaten vorgenommen. Der Grund ist, dass die Datenerfassung zum Zeitpunkt der Modelldokumentation bereits abgeschlossen ist und die nächste Überarbeitung voraussichtlich ab dem Jahr 2035 stattfinden wird.
 
 === Topic `+Fachdaten+`
 Das Topic `+Fachdaten+` umfasst die fachlichen Klassen des Themas.
