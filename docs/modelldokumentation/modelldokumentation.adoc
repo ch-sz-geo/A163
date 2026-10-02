@@ -1,4 +1,4 @@
-:title: <Themenname> (<Themennummer>)
+:title: Planung der Revitalisierung von Seeufern (A163)
 :subtitle: Modelldokumentation
 ifdef::backend-pdf[]
 = {title}
