@@ -1,7 +1,7 @@
 INTERLIS 2.4;
 !!==============================================================================
 !!@ Title               = "Revitalisierung von Seen; abgeändertes Bundesmodell";
-!!@ shortDescription    = "Dieses Modell beschreibt die Revitalisierung von Seen entsprechend den kantonalen Erhebungen";
+!!@ shortDescription    = "Dieses Modell beschreibt die Revitalisierung von Seen entsprechend den kantonalen Erhebungen.";
 !!@ technicalContact    = "mailto:geoportal@sz.ch";
 !!@ furtherInformation  = "https://ch-sz-geo.github.io/A163/docs/modelldokumentation.html";
 !!@ Identifikator       = "191.2";
@@ -11,6 +11,7 @@ INTERLIS 2.4;
 !!      Version     | wer | was
 !! Datum      | Nr  |     |
 !!------------------------------------------------------------------------------
+!! 2025-05-16 | 1.3 | MG  | Hinzufügen der OID und der neuen Standardattribute
 !! 2025-01-17 | 1.2 | Kep | Änderungen an Klassen:
 !!                            - Resultat_Plan_C_D
 !!                            - Aufwertungspotential
@@ -24,9 +25,9 @@ INTERLIS 2.4;
 !! 2023-10-10 | 1.1 | Kep | Nachführung der Modellanpassungen des Bundes
 !! 2020-08-11 | 1.0 | TH  | Erstfassung
 !!==============================================================================
-MODEL SZ_Revitalisierung_Seen_V1_2 (de)
+MODEL SZ_Revitalisierung_Seen_V1_3 (de)
   AT "https://models.geo.sz.ch"
-  VERSION "2025-01-17" =
+  VERSION "2025-05-16" =
 
   IMPORTS UNQUALIFIED INTERLIS;
 
@@ -50,6 +51,11 @@ MODEL SZ_Revitalisierung_Seen_V1_2 (de)
  TOPIC RevitalisierungSeen =
 !!------------------------------------------------------------------------------
     CLASS OekomorphologieSeeufer =
+      OID AS UUIDOID;
+      erfasstVon                  :  MANDATORY  TEXT*100;
+      erfasstAm                   :  MANDATORY  XMLDateTime;
+      geaendertVon                :  MANDATORY  TEXT*100;
+      geaendertAm                 :  MANDATORY  XMLDateTime;
       Kennung                     :  MANDATORY  TEXT*20;
       Achsgeometrie               :  MANDATORY  TEXT*5;
       LinearpositionVon           :  MANDATORY  0.0 .. 999999.9;
@@ -99,6 +105,11 @@ MODEL SZ_Revitalisierung_Seen_V1_2 (de)
     END Methode_IGKB;
 
     CLASS Resultat_Plan_B_E_F (ABSTRACT) =
+      OID AS UUIDOID;
+      erfasstVon         :  MANDATORY  TEXT*100;
+      erfasstAm          :  MANDATORY  XMLDateTime;
+      geaendertVon       :  MANDATORY  TEXT*100;
+      geaendertAm        :  MANDATORY  XMLDateTime;
       Kennung            :  MANDATORY  TEXT*20;
       Achsgeometrie      :  MANDATORY  TEXT*5;
       LinearpositionVon  :  MANDATORY  0.0 .. 999999.9;
@@ -120,6 +131,11 @@ MODEL SZ_Revitalisierung_Seen_V1_2 (de)
     END Umsetzung;
 
     CLASS Resultat_Plan_C_D (ABSTRACT) =
+      OID AS UUIDOID;
+      erfasstVon         :  MANDATORY  TEXT*100;
+      erfasstAm          :  MANDATORY  XMLDateTime;
+      geaendertVon       :  MANDATORY  TEXT*100;
+      geaendertAm        :  MANDATORY  XMLDateTime;
       Kennung            :  MANDATORY  TEXT*20;
       Achsgeometrie      :  MANDATORY  TEXT*5;
       LinearpositionVon  :  MANDATORY  0.0 .. 999999.9;
@@ -138,4 +154,4 @@ MODEL SZ_Revitalisierung_Seen_V1_2 (de)
 
   END RevitalisierungSeen;
 
-END SZ_Revitalisierung_Seen_V1_2.
+END SZ_Revitalisierung_Seen_V1_3.
